@@ -1,0 +1,27 @@
+$txcm-dashboardToggle-color: $txgl-white;
+
+$txcm-dashboardToggleIcon-size: 16px;
+$txcm-dashboardToggleIcon-color: $txgl-gray-100;
+$txcm-dashboardToggleIcon-background: $txgl-gray-400;
+
+.txcm-dashboardToggle {
+  @include txm-fontSize(18px);
+  position: relative;
+  display: flex;
+  order: -1;
+  align-items: center;
+  padding: 0;
+  color: $txcm-dashboardToggle-color;
+  background: none;
+  font-weight: 900;
+
+  &::before {
+    @include txm-pseudo(relative);
+    width: $txcm-dashboardToggleIcon-size;
+    height: $txcm-dashboardToggleIcon-size;
+    border-radius: $txgl-form-borderRadius;
+    margin: 0 8px 0 0;
+    color: $txcm-dashboardToggleIcon-color;
+    background: $txcm-dashboardToggleIcon-background;
+  }
+}

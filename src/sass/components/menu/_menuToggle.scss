@@ -1,0 +1,39 @@
+$txcm-menuToggle-size: 32px;
+$txcm-menuToggle-color: $txgl-white-900;
+$txcm-menuToggle-hover-color: $txgl-gray-100;
+
+$txcm-menuToggleBar-width: 12px;
+$txcm-menuToggleBar-height: 2px;
+
+.txcm-menuToggle {
+  @include txm-layer(top, 2);
+  @include txm-link($txcm-menuToggle-color, $txcm-menuToggle-color, $txcm-menuToggle-hover-color, $txcm-menuToggle-hover-color);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: $txcm-menuToggle-size;
+  height: $txcm-menuToggle-size;
+  color: $txcm-menuToggle-color;
+  background: none;
+  text-indent: -10000px;
+
+  &::before,
+  &::after {
+    @include txm-pseudo;
+    top: 50%;
+    left: 50%;
+    width: $txcm-menuToggleBar-width;
+    height: $txcm-menuToggleBar-height;
+    border-radius: 2px;
+    background: currentColor;
+  }
+
+  &::before {
+    margin: -4px 0 0 ($txcm-menuToggleBar-width / -2);
+  }
+
+  &::after {
+    margin: 3px 0 0 ($txcm-menuToggleBar-width / -2);
+  }
+}

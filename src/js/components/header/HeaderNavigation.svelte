@@ -1,0 +1,16 @@
+<nav
+  class="txcm-navigation">
+    <a
+      class="txcm-navigationLink"
+      href="/export">
+        Экспорт
+    </a>
+    <a
+      class="txcm-navigationLink"
+      href="/profile">
+        <img
+          class="txcm-navigationImage"
+          src="https://picsum.photos/30/30"
+          alt="Профиль">
+    </a>
+</nav>

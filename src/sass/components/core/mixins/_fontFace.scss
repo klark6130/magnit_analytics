@@ -1,0 +1,28 @@
+// Add New font-face
+
+@mixin txm-font-face($family, $filename, $variants, $extensions, $base: false) {
+  $familyNorm: txf-str-replace(#{$family}, ' ');
+  @each $variant, $name in $variants {
+    @font-face {
+      @include txm-font-variant($variant);
+      font-family: '#{$family}';
+      @if map-has-key($extensions, eot) {
+        src: url('../fonts/#{$familyNorm}/#{$filename}-#{$name}.eot');
+      }
+      src: txf-font-face-format($extensions, $familyNorm, $filename, $name);
+    }
+  }
+  $extend: #{'%'}font-#{$familyNorm};
+  $loaded: font-#{$familyNorm}-is-loaded;
+  @if ($base) {
+    .#{$loaded} {
+      font-family: unquote('"' + $family + '"' + txf-appended-stack($append));
+    }
+  }
+
+  #{$extend} {
+    .#{$loaded} & {
+      font-family: unquote('"' + $family + '"' + txf-appended-stack($append));
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.txcm-stepper {
+  display: flex;
+  padding: 0;
+  margin: 0 $txgl-filter-margin;
+  list-style: none;
+}
+
+.txcm-stepperOption {
+
+  padding: 0;
+  margin: 0;
+
+  &:first-child {
+    @extend %txph-stepperOption-firstChild;
+  }
+
+  &:last-child {
+    @extend %txph-stepperOption-lastChild;
+  }
+}
+
+.txcm-stepperInput {
+  position: absolute;
+  left: -10000px;
+
+  &:checked {
+    @extend %txph-stepperInput-checked;
+  }
+}
+
+$txcm-stepperLabel-color: $txgl-gray-100;
+$txcm-stepperLabel-background: $txgl-gray-400;
+$txcm-stepperLabel-hover-color: $txgl-white;
+$txcm-stepperLabel-hover-background: $txgl-gray-300;
+$txcm-stepperLabel-active-color: $txgl-white;
+$txcm-stepperLabel-active-background: $txgl-gray-200;
+$txcm-stepperLabel-checked-color: $txgl-gray;
+$txcm-stepperLabel-checked-background: $txgl-white;
+
+.txcm-stepperLabel {
+  display: flex;
+  align-items: center;
+  height: $txgl-filter-height;
+  padding: 0 8px;
+  color: $txcm-stepperLabel-color;
+  background: $txcm-stepperLabel-background;
+  transition: background $txgl-transition, color $txgl-transition;
+
+  &:hover {
+    color: $txcm-stepperLabel-hover-color;
+    background: $txcm-stepperLabel-hover-background;
+  }
+
+  &:active {
+    color: $txcm-stepperLabel-active-color;
+    background: $txcm-stepperLabel-active-background;
+  }
+
+  %txph-stepperOption-firstChild > & {
+    border-radius: $txgl-form-borderRadius 0 0 $txgl-form-borderRadius;
+  }
+
+  %txph-stepperOption-lastChild > & {
+    border-radius: 0 $txgl-form-borderRadius $txgl-form-borderRadius 0;
+  }
+
+  %txph-stepperInput-checked + & {
+    color: $txcm-stepperLabel-checked-color;
+    background: $txcm-stepperLabel-checked-background;
+  }
+}

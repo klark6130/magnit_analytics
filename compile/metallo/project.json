@@ -1,0 +1,17 @@
+{
+  "src": "src",
+  "public": "public",
+  "build": "build",
+  "components": "components",
+  "sass": "sass",
+  "css": "css",
+  "js": "js",
+  "bundle": "js",
+  "sprites": "sprites",
+
+  "port": "3000",
+  "backendPort": "3001",
+  "protocol": "http",
+
+  "markup": "index.html"
+}

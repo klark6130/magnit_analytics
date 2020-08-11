@@ -1,0 +1,4 @@
+@mixin txm-hyphens($hyphens: manual) {
+  -epub-hyphens: $hyphens;
+  hyphens: $hyphens;
+}

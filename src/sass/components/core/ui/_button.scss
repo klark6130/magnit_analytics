@@ -1,0 +1,17 @@
+%txph-buttonLink {
+  @extend %txph-formButtonStyle;
+  @include txm-link($txgl-button-color);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: $txgl-form-height;
+
+  &-disabled {
+    @extend %txph-formButtonStyle-disabled;
+    @include txm-link($txgl-button-disabled-color);
+  }
+}
+
+%txph-button {
+  color: $txgl-button-color;
+}

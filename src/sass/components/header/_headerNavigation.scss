@@ -1,0 +1,23 @@
+.txcm-navigation {
+  display: flex;
+  align-items: center;
+}
+
+$txcm-navigationLink-size: 32px;
+$txcm-navigationLink-color: $txgl-white;
+$txcm-navigationLink-hover-color: $txgl-gray-100;
+
+.txcm-navigationLink {
+  @include txm-link($txcm-navigationLink-color, $txcm-navigationLink-color, $txcm-navigationLink-hover-color, $txcm-navigationLink-hover-color);
+  display: inherit;
+  align-items: inherit;
+  height: $txcm-navigationLink-size;
+  min-width: $txcm-navigationLink-size;
+  margin: 0 0 0 16px;
+  text-decoration: none;
+}
+
+.txcm-navigationImage {
+  display: block;
+  border-radius: 50%;
+}

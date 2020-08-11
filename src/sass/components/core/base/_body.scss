@@ -1,0 +1,14 @@
+body {
+  position: relative;
+  display: inherit;
+  flex-direction: inherit;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  @include txm-media(print) {
+    width: auto;
+    padding: 2.54cm;
+  }
+}
