@@ -1,11 +1,11 @@
-$txcm-dashboardToggle-color: $txgl-white;
+$txcm-dashboardToggle-color: $txgl-white-900;
 
 $txcm-dashboardToggleIcon-size: 16px;
 $txcm-dashboardToggleIcon-color: $txgl-gray-100;
 $txcm-dashboardToggleIcon-background: $txgl-gray-400;
 
 .txcm-dashboardToggle {
-  @include txm-fontSize(18px);
+  @include txmx-fontSize(18px);
   position: relative;
   display: flex;
   order: -1;
@@ -16,7 +16,7 @@ $txcm-dashboardToggleIcon-background: $txgl-gray-400;
   font-weight: 900;
 
   &::before {
-    @include txm-pseudo(relative);
+    @include txmx-pseudo(relative);
     width: $txcm-dashboardToggleIcon-size;
     height: $txcm-dashboardToggleIcon-size;
     border-radius: $txgl-form-borderRadius;

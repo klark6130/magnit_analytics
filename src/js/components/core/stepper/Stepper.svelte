@@ -3,7 +3,8 @@
 
   export let name;
   export let options;
-  export let steps;
+  export let pick;
+  export let cancel = false;
   export let theme = null;
 </script>
 
@@ -11,9 +12,10 @@
   class={`txcm-stepper ${theme}`}>
     {#each options as option, index}
       <StepperOption
+        bind:pick
         {...option}
-        {steps}
         {name}
+        {cancel}
         {index}/>
     {/each}
 </ul>

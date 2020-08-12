@@ -1,6 +1,6 @@
 // Pseudo Element
 
-@mixin txm-pseudo($position: absolute, $display: block, $content: '') {
+@mixin txmx-pseudo($position: absolute, $display: block, $content: '') {
   @if $position == 'absolute' and $display == 'block' and $content == '' {
     position: absolute;
     content: '';

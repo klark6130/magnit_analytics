@@ -1,0 +1,65 @@
+$txcm-dashboardNavGroupToggle-height: 32px;
+$txcm-dashboardNavGroupToggle-color: $txgl-white-900;
+
+$txcm-dashboardNavGroupToggleIcon-width: 3px;
+$txcm-dashboardNavGroupToggleIcon-height: 5px;
+$txcm-dashboardNavGroupToggleIcon-color: $txgl-gray-100;
+
+.txcm-dashboardNavGroupToggle {
+  @include txmx-fontSize(12px);
+  position: relative;
+  width: 100%;
+  height: $txcm-dashboardNavGroupToggle-height;
+  padding: 0 0 0 20px;
+  color: $txcm-dashboardNavGroupToggle-color;
+  background: none;
+  text-align: left;
+
+  &::before {
+    @include txmx-pseudo;
+    top: 50%;
+    left: 0;
+    width: $txcm-dashboardNavGroupToggleIcon-width;
+    height: $txcm-dashboardNavGroupToggleIcon-height;
+    margin: ($txcm-dashboardNavGroupToggleIcon-height / -2) 0 0;
+    color: $txcm-dashboardNavGroupToggleIcon-color;
+    background: currentColor;
+    transition: transform $txgl-transition-default;
+  }
+
+  &-is-active {
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.txcm-dashboardNavGroup {
+  display: none;
+  padding: 0 0 0 20px;
+  margin: 0 0 8px;
+
+  &-is-active {
+    display: block;
+  }
+}
+
+$txcm-dashboardNavGroupLink-height: 32px;
+$txcm-dashboardNavGroupLink-color: $txgl-gray-100;
+$txcm-dashboardNavGroupLink-hover-color: $txgl-white;
+$txcm-dashboardNavGroupLink-active-color: $txgl-white-900;
+
+.txcm-dashboardNavGroupLink {
+  @extend %txph-dashboardNavMark;
+  @include txmx-link($txcm-dashboardNavGroupLink-color, $txcm-dashboardNavGroupLink-color, $txcm-dashboardNavGroupLink-hover-color, $txcm-dashboardNavGroupLink-active-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $txcm-dashboardNavGroupLink-height;
+  text-decoration: none;
+
+  &-is-active {
+    @extend %txph-dashboardNavMark-is-active;
+    @include txmx-link($txcm-dashboardNavGroupLink-active-color);
+  }
+}

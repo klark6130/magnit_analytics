@@ -4,15 +4,15 @@
   export let units = 0;
   export let options = [{
     label: '% от выр.',
-    step: 0,
+    value: 0,
   }, {
     label: 'млн. руб',
-    step: 1,
+    value: 1,
   }];
 </script>
 
 <Stepper
   theme="txcm-unitStepper"
   name="uintOptions"
-  steps={units}
+  pick={units}
   {options} />

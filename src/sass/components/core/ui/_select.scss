@@ -1,0 +1,45 @@
+.txcm-select {
+  position: relative;
+  white-space: nowrap;
+}
+
+$txcm-selectToggle-color: $txgl-white;
+$txcm-selectToggle-background: $txgl-gray-400;
+$txcm-selectToggle-hover-color: $txgl-white-900;
+$txcm-selectToggle-hover-background: $txgl-gray-300;
+$txcm-selectToggle-active-color: $txgl-white-900;
+$txcm-selectToggle-active-background: $txgl-gray-200;
+
+.txcm-selectToggle {
+  height: $txgl-filter-height;
+  padding: 0 28px 0 12px;
+  margin: 0 $txgl-filter-margin;
+  color: $txcm-selectToggle-color;
+  background: $txcm-selectToggle-background;
+
+  &:hover {
+    color: $txcm-selectToggle-hover-color;
+    background: $txcm-selectToggle-hover-background;
+  }
+
+  &:active {
+    color: $txcm-selectToggle-active-color;
+    background: $txcm-selectToggle-active-background;
+  }
+}
+
+.txcm-selectOptions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.txcm-selectInput {
+  position: absolute;
+  left: -10000px;
+}

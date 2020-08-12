@@ -18,10 +18,10 @@ $txgl-transition-slowest: 500ms;
 
 $txgl-transition: $txgl-transition-default;
 
-$txgl-link: $txgl-gray-100;
-$txgl-visited: $txgl-gray-100;
-$txgl-hover: $txgl-white;
-$txgl-active: $txgl-white;
+$txgl-link: $txgl-white;
+$txgl-visited: $txgl-white;
+$txgl-hover: $txgl-white-900;
+$txgl-active: $txgl-white-900;
 
 $txgl-tap: rgba($txgl-active, 0.35);
 
@@ -33,12 +33,14 @@ $txgl-ui-invalid-color: $txgl-red;
 $txgl-form-height: 32px;
 $txgl-form-borderWidth: 1px;
 $txgl-form-borderRadius: 3px;
-$txgl-form-color: $txgl-gray-100;
+$txgl-form-color: $txgl-white-900;
 $txgl-form-borderColor: $txgl-gray-300;
+$txgl-form-background: $txgl-gray-400;
 $txgl-form-hover-color: $txgl-white-900;
-$txgl-form-hover-borderColor: $txgl-gray-100;
+$txgl-form-hover-borderColor: $txgl-gray-200;
+$txgl-form-hover-background: $txgl-gray-300;
 $txgl-form-active-color: $txgl-white-900;
-$txgl-form-active-borderColor: $txgl-gray-200;
+$txgl-form-active-borderColor: $txgl-gray-100;
 $txgl-form-disabled-color: rgba($txgl-gray-200, 0.65);
 $txgl-form-disabled-borderColor: $txgl-gray-300;
 $txgl-form-error-color: $txgl-white-900;
@@ -56,7 +58,7 @@ $txgl-button-padding: 12px;
 $txgl-filter-height: 25px;
 $txgl-filter-margin: 2px;
 
-$txgl-placeholder-color: $txgl-gray-300;
+$txgl-placeholder-color: $txgl-gray-100;
 
 $txgl-selection-color: $txgl-white;
 $txgl-selection-background: $txgl-gray-300;

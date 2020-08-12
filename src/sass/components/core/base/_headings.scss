@@ -9,30 +9,30 @@
 
 h1 {
   @extend %txph-heading;
-  @include txm-fontSize(h1);
+  @include txmx-fontSize(h1);
 }
 
 h2 {
   @extend %txph-heading;
-  @include txm-fontSize(h2);
+  @include txmx-fontSize(h2);
 }
 
 h3 {
   @extend %txph-heading;
-  @include txm-fontSize(h3);
+  @include txmx-fontSize(h3);
 }
 
 h4 {
   @extend %txph-heading;
-  @include txm-fontSize(h4);
+  @include txmx-fontSize(h4);
 }
 
 h5 {
   @extend %txph-heading;
-  @include txm-fontSize(h5);
+  @include txmx-fontSize(h5);
 }
 
 h6 {
   @extend %txph-heading;
-  @include txm-fontSize(h6);
+  @include txmx-fontSize(h6);
 }

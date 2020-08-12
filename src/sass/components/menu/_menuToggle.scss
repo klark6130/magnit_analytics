@@ -6,8 +6,8 @@ $txcm-menuToggleBar-width: 12px;
 $txcm-menuToggleBar-height: 2px;
 
 .txcm-menuToggle {
-  @include txm-layer(top, 2);
-  @include txm-link($txcm-menuToggle-color, $txcm-menuToggle-color, $txcm-menuToggle-hover-color, $txcm-menuToggle-hover-color);
+  @include txmx-layer(over, 1);
+  @include txmx-link($txcm-menuToggle-color, $txcm-menuToggle-color, $txcm-menuToggle-hover-color, $txcm-menuToggle-hover-color);
   position: fixed;
   top: 20px;
   right: 20px;
@@ -20,7 +20,7 @@ $txcm-menuToggleBar-height: 2px;
 
   &::before,
   &::after {
-    @include txm-pseudo;
+    @include txmx-pseudo;
     top: 50%;
     left: 50%;
     width: $txcm-menuToggleBar-width;

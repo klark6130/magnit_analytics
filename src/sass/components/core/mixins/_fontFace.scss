@@ -1,10 +1,10 @@
 // Add New font-face
 
-@mixin txm-font-face($family, $filename, $variants, $extensions, $base: false) {
+@mixin txmx-font-face($family, $filename, $variants, $extensions, $base: false) {
   $familyNorm: txf-str-replace(#{$family}, ' ');
   @each $variant, $name in $variants {
     @font-face {
-      @include txm-font-variant($variant);
+      @include txmx-font-variant($variant);
       font-family: '#{$family}';
       @if map-has-key($extensions, eot) {
         src: url('../fonts/#{$familyNorm}/#{$filename}-#{$name}.eot');

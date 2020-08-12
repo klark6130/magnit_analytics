@@ -1,5 +1,5 @@
 html {
-  @include txm-hyphens;
+  @include txmx-hyphens;
   display: flex;
   flex-direction: column;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -15,7 +15,7 @@ html {
   text-rendering: optimizeSpeed;
   line-height: $txgl-lineHeight;
 
-  @include txm-media(print) {
+  @include txmx-media(print) {
     box-decoration-break: clone;
     background: $txgl-background-print;
     font-size: 12pt;

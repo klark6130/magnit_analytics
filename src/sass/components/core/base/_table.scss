@@ -20,7 +20,7 @@ table {
 }
 
 thead {
-  @include txm-media(print) {
+  @include txmx-media(print) {
     display: table-header-group;
   }
 }

@@ -3,7 +3,7 @@ $txcm-header-borderColor: $txgl-gray-400;
 $txcm-headerDummy-size: 32px;
 
 .txcm-header {
-  @include txm-layer(top);
+  @include txmx-layer(top);
   position: fixed;
   top: 0;
   left: 0;
@@ -16,13 +16,13 @@ $txcm-headerDummy-size: 32px;
   background: $txgl-background;
 
   &::before {
-    @include txm-pseudo(relative);
+    @include txmx-pseudo(relative);
     order: 0;
     flex-grow: 1;
   }
 
   &::after {
-    @include txm-pseudo(relative);
+    @include txmx-pseudo(relative);
     width: $txcm-headerDummy-size;
     height: $txcm-headerDummy-size;
   }

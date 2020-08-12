@@ -1,0 +1,31 @@
+$txcm-menuDrawerTemplates-borderColor: $txgl-gray-300;
+
+.txcm-menuDrawerTemplates {
+  width: 100%;
+  padding: 24px 20px 0;
+  border-top: 1px solid $txcm-menuDrawerTemplates-borderColor;
+  margin: 24px -20px 0;
+}
+
+$txcm-menuDrawerTemplatesHeader-color: $txgl-white-900;
+
+.txcm-menuDrawerTemplatesHeader {
+  @include txmx-fontSize(15px);
+  margin: 0 0 8px;
+  color: $txcm-menuDrawerTemplatesHeader-color;
+  font-weight: bold;
+}
+
+.txcm-menuDrawerTemplateLink {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  text-decoration: none;
+}
+
+.txcm-menuDrawerAddTemplate {
+  @extend %txph-buttonLayout;
+  @extend %txph-buttonBorder;
+  width: 100%;
+  margin: 28px 0 0;
+}

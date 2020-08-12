@@ -1,6 +1,6 @@
 // Link States
 
-@mixin txm-link($linkColor: null, $visitedColor: null, $hoverColor: null, $activeColor: null, $all: true) {
+@mixin txmx-link($linkColor: null, $visitedColor: null, $hoverColor: null, $activeColor: null, $all: true) {
   @if ($linkColor and $all == short) {
     color: $linkColor;
 

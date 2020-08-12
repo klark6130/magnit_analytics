@@ -11,7 +11,7 @@
     </NavLink>
     <NavLink
       linkClass="txcm-headerTab"
-      to="/1">
+      to="/">
         Факторы
     </NavLink>
 </nav>

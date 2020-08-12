@@ -1,9 +1,10 @@
 <script>
-  export let steps;
-  export let step;
+  export let pick;
+  export let value;
   export let name;
   export let index;
   export let label;
+  export let cancel;
 
   const id = `${name}-${index}`;
 </script>
@@ -13,10 +14,10 @@
     <input
       class="txcm-stepperInput"
       type="radio"
+      bind:group={pick}
       {name}
       {id}
-      bind:group={steps}
-      value={step}>
+      {value}>
     <label
       class="txcm-stepperLabel"
       for={id}>

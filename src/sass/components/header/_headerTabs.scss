@@ -5,8 +5,8 @@
   margin: 0 0 0 12px;
 }
 
-$txcm-headerTab-active-color: $txgl-white;
-$txcm-headerTab-borderColor: $txgl-white;
+$txcm-headerTab-active-color: $txgl-white-900;
+$txcm-headerTab-borderColor: $txgl-white-900;
 
 .txcm-headerTab {
   position: relative;
@@ -16,7 +16,7 @@ $txcm-headerTab-borderColor: $txgl-white;
   text-decoration: none;
 
   &::before {
-    @include txm-pseudo;
+    @include txmx-pseudo;
     top: 100%;
     left: 0;
     box-sizing: border-box;
@@ -28,7 +28,7 @@ $txcm-headerTab-borderColor: $txgl-white;
   }
 
   &-is-active {
-    @include txm-link($txcm-headerTab-active-color);
+    @include txmx-link($txcm-headerTab-active-color);
 
     &::before {
       opacity: 1;

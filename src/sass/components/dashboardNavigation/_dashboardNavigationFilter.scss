@@ -1,0 +1,63 @@
+$txcm-dashboardNavigationFilterIcon-size: 10px;
+$txcm-dashboardNavigationFilterIcon-color: $txgl-gray-200;
+
+.txcm-dashboardNavigationFilter {
+  position: relative;
+  margin: 0 0 8px;
+
+  &::before {
+    @include txmx-pseudo;
+    top: 50%;
+    left: 16px;
+    width: $txcm-dashboardNavigationFilterIcon-size;
+    height: $txcm-dashboardNavigationFilterIcon-size;
+    margin: ($txcm-dashboardNavigationFilterIcon-size / -2) 0 0 ($txcm-dashboardNavigationFilterIcon-size / -2);
+    color: $txcm-dashboardNavigationFilterIcon-color;
+    background: currentColor;
+  }
+}
+
+.txcm-dashboardNavigationFilterInput {
+  width: 100%;
+  padding: 0 31px;
+
+  &:focus {
+    @extend %txph-dashboardNavigationFilterInput-focus;
+  }
+}
+
+$txcm-dashboardNavigationFilterCancel-width: 31px;
+$txcm-dashboardNavigationFilterCancel-height: 32px;
+
+$txcm-dashboardNavigationFilterCancelIcon-size: 8px;
+$txcm-dashboardNavigationFilterCancelIcon-color: $txgl-gray-200;
+
+.txcm-dashboardNavigationFilterCancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  width: $txcm-dashboardNavigationFilterCancel-width;
+  height: $txcm-dashboardNavigationFilterCancel-height;
+  background: none;
+  text-indent: -10000px;
+  opacity: 0;
+  transition: opacity $txgl-transition-default, visibility $txgl-transition-default step-end;
+
+  &::before {
+    @include txmx-pseudo;
+    top: 50%;
+    left: 50%;
+    width: $txcm-dashboardNavigationFilterCancelIcon-size;
+    height: $txcm-dashboardNavigationFilterCancelIcon-size;
+    margin: ($txcm-dashboardNavigationFilterCancelIcon-size / -2) 0 0 ($txcm-dashboardNavigationFilterCancelIcon-size / -2);
+    color: $txcm-dashboardNavigationFilterCancelIcon-color;
+    background: currentColor;
+  }
+
+  %txph-dashboardNavigationFilterInput-focus + & {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $txgl-transition-default, visibility $txgl-transition-default step-start;
+  }
+}

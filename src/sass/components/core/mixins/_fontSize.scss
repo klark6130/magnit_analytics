@@ -1,6 +1,6 @@
 // Set Font-size Property
 
-@mixin txm-fontSize($newFontSize, $fallback: false) {
+@mixin txmx-fontSize($newFontSize, $fallback: false) {
   $size: 0;
   @if type-of($newFontSize) == number {
     $size: $newFontSize;

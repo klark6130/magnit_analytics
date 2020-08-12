@@ -3,7 +3,7 @@ $txph-monoHighlight-color: $txgl-red;
 %txph-monoHighlight {
   color: $txph-monoHighlight-color;
 
-  @include txm-media(print) {
+  @include txmx-media(print) {
     color: $txgl-text-print;
   }
 }

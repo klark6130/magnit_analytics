@@ -8,7 +8,7 @@ $txcm-navigationLink-color: $txgl-white;
 $txcm-navigationLink-hover-color: $txgl-gray-100;
 
 .txcm-navigationLink {
-  @include txm-link($txcm-navigationLink-color, $txcm-navigationLink-color, $txcm-navigationLink-hover-color, $txcm-navigationLink-hover-color);
+  @include txmx-link($txcm-navigationLink-color, $txcm-navigationLink-color, $txcm-navigationLink-hover-color, $txcm-navigationLink-hover-color);
   display: inherit;
   align-items: inherit;
   height: $txcm-navigationLink-size;

@@ -1,7 +1,7 @@
 <script>
   import MenuToggle from './MenuToggle.svelte';
-  import MenuNavigation from './MenuNavigation.svelte';
+  import MenuDrawer from './MenuDrawer.svelte';
 </script>
 
 <MenuToggle />
-<MenuNavigation />
+<MenuDrawer />

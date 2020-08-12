@@ -2,6 +2,7 @@
   display: flex;
   padding: 0;
   margin: 0 $txgl-filter-margin;
+  white-space: nowrap;
   list-style: none;
 }
 
@@ -28,14 +29,14 @@
   }
 }
 
-$txcm-stepperLabel-color: $txgl-gray-100;
+$txcm-stepperLabel-color: $txgl-white;
 $txcm-stepperLabel-background: $txgl-gray-400;
-$txcm-stepperLabel-hover-color: $txgl-white;
+$txcm-stepperLabel-hover-color: $txgl-white-900;
 $txcm-stepperLabel-hover-background: $txgl-gray-300;
-$txcm-stepperLabel-active-color: $txgl-white;
+$txcm-stepperLabel-active-color: $txgl-white-900;
 $txcm-stepperLabel-active-background: $txgl-gray-200;
 $txcm-stepperLabel-checked-color: $txgl-gray;
-$txcm-stepperLabel-checked-background: $txgl-white;
+$txcm-stepperLabel-checked-background: $txgl-white-900;
 
 .txcm-stepperLabel {
   display: flex;

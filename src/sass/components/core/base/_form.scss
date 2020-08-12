@@ -1,5 +1,5 @@
 form {
-  @include txm-media(print) {
+  @include txmx-media(print) {
     display: none;
   }
 }
@@ -31,7 +31,7 @@ label {
   margin: 0;
   font-family: inherit;
 
-  @include txm-media(print) {
+  @include txmx-media(print) {
     display: none;
   }
 }
@@ -39,6 +39,8 @@ label {
 %txph-formFieldStyle {
   border: $txgl-form-borderWidth solid $txgl-form-borderColor;
   border-radius: $txgl-form-borderRadius;
+  color: $txgl-form-color;
+  background: $txgl-form-background;
   font-size: inherit;
   transition: border-color $txgl-transition;
 
@@ -48,6 +50,23 @@ label {
 }
 
 %txph-formFieldState {
+  &:hover {
+    border-color: $txgl-form-hover-borderColor;
+    color: $txgl-form-hover-color;
+    background: $txgl-form-hover-background;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $txgl-form-active-borderColor;
+    color: $txgl-form-active-color;
+    background: transparent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
   &:disabled {
     border-color: $txgl-form-disabled-borderColor;
     color: $txgl-ui-disabled-color;
@@ -62,40 +81,6 @@ label {
     &:hover {
       border-color: $txgl-form-borderColor;
     }
-  }
-}
-
-$txph-formPlaceholder-color: $txgl-gray;
-
-%txph-formPlaceholderStyle {
-  color: $txph-formPlaceholder-color;
-  opacity: 1;
-}
-
-%txph-formPlaceholder {
-  &::-webkit-input-placeholder {
-    color: $txph-formPlaceholder-color;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder {
-    color: $txph-formPlaceholder-color;
-    opacity: 1;
-  }
-
-  &:-ms-input-placeholder {
-    color: $txph-formPlaceholder-color;
-    opacity: 1;
-  }
-
-  &:-moz-placeholder {
-    color: $txph-formPlaceholder-color;
-    opacity: 1;
-  }
-
-  &::placeholder {
-    color: $txph-formPlaceholder-color;
-    opacity: 1;
   }
 }
 
@@ -115,9 +100,8 @@ $txph-formPlaceholder-color: $txgl-gray;
 %txph-input {
   @extend %txph-formElement;
   @extend %txph-formFieldStyle;
-  @extend %txph-formPlaceholder;
   height: $txgl-form-height;
-  padding: 0 $txgl-gap;
+  padding: 0 16px;
   box-shadow: none;
 }
 
@@ -153,18 +137,10 @@ input {
 
   &[type='search'] {
     @extend %txph-formAppearance;
-
-    ::-webkit-search-cancel-button {
-      -webkit-appearance: none;
-    }
   }
 
   &[type='number'] {
     @extend %txph-formAppearance;
-
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-    }
   }
 
   &[type='color'] {
@@ -180,6 +156,39 @@ input {
     height: auto;
     padding: 0;
     border: 0;
+  }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-search-cancel-button, {
+    display: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $txgl-placeholder-color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $txgl-placeholder-color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $txgl-placeholder-color;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: $txgl-placeholder-color;
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: $txgl-placeholder-color;
+    opacity: 1;
   }
 }
 
@@ -216,7 +225,7 @@ textarea {
   @extend %txph-formElement;
   @extend %txph-formFieldStyle;
   @extend %txph-formFieldState;
-  @extend %txph-formPlaceholder;
+  // @extend %txph-formPlaceholder;
   display: block;
   overflow: auto;
   height: 150px;

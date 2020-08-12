@@ -1,0 +1,58 @@
+$txcm-dashboardNavigationHeader-color: $txgl-white-900;
+$txcm-dashboardNavigationHeader-height: 32px;
+
+.txcm-dashboardNavigationHeader {
+  @include txmx-fontSize(15px);
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: $txcm-dashboardNavigationHeader-height;
+  margin: 0 0 14px;
+  color: $txcm-dashboardNavigationHeader-color;
+  background: inherit;
+  font-weight: bold;
+}
+
+$txph-dashboardNavMark-width: 9px;
+$txph-dashboardNavMark-height: 6px;
+$txph-dashboardNavMark-color: $txgl-red;
+
+%txph-dashboardNavMark {
+  &::before {
+    @include txmx-pseudo;
+    top: 50%;
+    right: 0;
+    width: $txph-dashboardNavMark-width;
+    height: $txph-dashboardNavMark-height;
+    margin: ($txph-dashboardNavMark-height / -2) 0 0 0;
+    color: $txph-dashboardNavMark-color;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity $txgl-transition-default;
+  }
+
+  &-is-active {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+$txcm-dashboardNavLink-height: 32px;
+$txcm-dashboardNavLink-active-color: $txgl-white-900;
+
+.txcm-dashboardNavLink {
+  @extend %txph-dashboardNavMark;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $txcm-dashboardNavLink-height;
+  text-decoration: none;
+
+  &-is-active {
+    @extend %txph-dashboardNavMark-is-active;
+    @include txmx-link($txcm-dashboardNavLink-active-color);
+  }
+}

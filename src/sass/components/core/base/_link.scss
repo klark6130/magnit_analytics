@@ -1,5 +1,5 @@
 a {
-  @include txm-link($txgl-link, $txgl-visited, $txgl-hover, $txgl-active);
+  @include txmx-link($txgl-link, $txgl-visited, $txgl-hover, $txgl-active);
   -webkit-tap-highlight-color: $txgl-tap;
   text-decoration: underline;
   text-decoration-skip: spaces edges;
@@ -7,12 +7,12 @@ a {
   touch-action: manipulation;
   transition: color $txgl-transition;
 
-  @include txm-media(coarse) {
-    @include txm-link($txgl-link, $txgl-visited, $txgl-link, $txgl-link);
+  @include txmx-media(coarse) {
+    @include txmx-link($txgl-link, $txgl-visited, $txgl-link, $txgl-link);
   }
 
-  @include txm-media(print) {
-    @include txm-link($txgl-text-print, $all: true);
+  @include txmx-media(print) {
+    @include txmx-link($txgl-text-print, $all: true);
     text-decoration: none;
 
     &::after {
