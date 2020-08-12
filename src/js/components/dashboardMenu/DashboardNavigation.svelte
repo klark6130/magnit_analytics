@@ -1,6 +1,6 @@
 <script>
   import NavLink from 'core/navLink/NavLink.svelte';
-  import DashboardNavigationFilter from './DashboardNavigationFilter.svelte'
+  import DashboardListFilter from '../dashboardListFilter/DashboardListFilter.svelte'
   import DashboardNavigationFinancialGroups from './DashboardNavigationFinancialGroups.svelte'
   import DashboardNavigationOperationslGroups from './DashboardNavigationOperationslGroups.svelte'
 </script>
@@ -11,7 +11,7 @@
       class="txcm-dashboardNavigationHeader">
         Выбор показателя
     </div>
-    <DashboardNavigationFilter />
+    <DashboardListFilter />
     <NavLink
       linkClass="txcm-dashboardNavLink"
       to="/">

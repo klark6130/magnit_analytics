@@ -16,6 +16,6 @@
         {...option}
         {name}
         {cancel}
-        {index}/>
+        {index} />
     {/each}
 </ul>

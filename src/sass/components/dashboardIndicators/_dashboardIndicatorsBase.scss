@@ -1,0 +1,16 @@
+$txcm-dashboardIndicatorsHeader-color: $txgl-white-900;
+$txcm-dashboardIndicatorsHeader-height: 32px;
+
+.txcm-dashboardIndicatorsHeader {
+  @include txmx-fontSize(15px);
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  min-height: $txcm-dashboardIndicatorsHeader-height;
+  margin: 0 0 14px;
+  color: $txcm-dashboardIndicatorsHeader-color;
+  background: inherit;
+  font-weight: bold;
+}

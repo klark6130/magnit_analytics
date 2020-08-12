@@ -3,16 +3,20 @@
   import Select from 'core/select/Select.svelte';
   import Stepper from 'core/stepper/Stepper.svelte';
 
+  const ELEMENTS = {
+    stepper: Stepper,
+    pick: Pick,
+    select: Select,
+  };
+
   export let element;
+
+  function pickElement(type) {
+    if (ELEMENTS[type]) return ELEMENTS[type];
+    return ELEMENTS.financial;
+  }
 </script>
 
-{#if element.type === 'stepper'}
-  <Stepper
-    {...element.content}/>
-{:else if element.type === 'pick'}
-  <Pick
-    {...element.content}/>
-{:else if element.type === 'select'}
-  <Select
-    {...element.content}/>
-{/if}
+<svelte:component
+  this={pickElement(element.type)}
+  {...element.content} />

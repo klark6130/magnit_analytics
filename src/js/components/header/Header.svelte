@@ -3,6 +3,8 @@
   import HeaderTabs from './HeaderTabs.svelte';
   import HeaderFilter from './HeaderFilter.svelte';
   import HeaderNavigation from './HeaderNavigation.svelte';
+
+  export let section;
 </script>
 
 <header

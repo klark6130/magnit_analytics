@@ -1,12 +1,12 @@
 <form
-  class="txcm-dashboardNavigationFilter"
+  class="txcm-dashboardListFilter"
   action="/filter">
     <input
-      class="txcm-dashboardNavigationFilterInput"
+      class="txcm-dashboardListFilterInput"
       type="search"
       placeholder="Поиск">
     <button
-      class="txcm-dashboardNavigationFilterCancel">
+      class="txcm-dashboardListFilterCancel">
         Сбросить
     </button>
 </form>

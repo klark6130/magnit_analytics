@@ -1,18 +1,16 @@
 <script>
-  import { tick } from 'svelte';
   import { Router, Route, navigate } from 'svelte-routing';
   import { initUser } from '../state/user';
-  import Dashboard from './dashboard/Dashboard.svelte';
+  import DashboardPage from './dashboard/DashboardPage.svelte';
   import LoginPage from './pages/LoginPage.svelte';
   import LogoutPage from './pages/LogoutPage.svelte';
-  import RootPage from './pages/RootPage.svelte';
   import LoadingPage from './pages/LoadingPage.svelte';
   import ErrorPage from './pages/ErrorPage.svelte';
+  import DefaultPage from './pages/DefaultPage.svelte';
 
   function login() {
     return Promise.resolve({
       success: true,
-      redirect: '/dashboard/financial/',
       result: {
         name: 'Buzz Killington',
         photo: 'https://picsum.photos/30/30',
@@ -21,40 +19,31 @@
     });
   }
 
-  function nextStep({ success, result, redirect }) {
-    if (success) {
-      initUser(result);
-      navigate(redirect);
-    } else {
-      navigate('/login');
-    }
+  function next({ success, result }) {
+    if (success) initUser(result);
+    else navigate('/login');
   }
 
-  function initApp() {
-    return login().then(nextStep);
+  function initialize() {
+    return login().then(next);
   }
 </script>
 
 <Router>
-  {#await initApp()}
+  {#await initialize()}
     <LoadingPage />
   {:then}
       <Route
-        path="/dashboard/*details">
-        <Dashboard />
-      </Route>
+        path="/dashboard/:section/*settings"
+        component={DashboardPage} />
       <Route
-        path="/login">
-          <LoginPage />
-      </Route>
+        path="/login"
+        component={LoginPage} />
       <Route
-        path="/logout">
-          <LogoutPage />
-      </Route>
+        path="/logout"
+        component={LogoutPage} />
       <Route
-        path="/">
-          <RootPage />
-      </Route>
+        component={DefaultPage} />
   {:catch error}
     <ErrorPage
       {error}/>

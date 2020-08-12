@@ -167,6 +167,6 @@
 <div class="txcm-dashboardFilter">
   {#each filterGroups as group}
     <DashboardFilterGroup
-      {group}/>
+      {group} />
   {/each}
 </div>

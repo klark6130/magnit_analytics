@@ -24,7 +24,7 @@
             bind:pick
             {...option}
             {name}
-            {index}/>
+            {index} />
         {/each}
     </ul>
 </div>

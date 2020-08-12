@@ -2,18 +2,18 @@
   import { onDestroy } from 'svelte';
   import Overlay from 'core/overlay/Overlay.svelte';
   import { subscribeUI, updateUI } from '../../state/ui';
-  import DashboardNavigation from './DashboardNavigation.svelte';
 
+  export let store;
   export let isActive = false;
 
-  const unsubscribeUI = subscribeUI('dashDrawer', onDashDrawerChange);
+  const unsubscribeUI = subscribeUI(store, onDashDrawerChange);
 
   function onDashDrawerChange(update) {
     isActive = update;
   }
 
   function onCloseClick() {
-    updateUI({ dashDrawer: false });
+    updateUI({ [store]: false });
   }
 
   onDestroy(unsubscribeUI);
@@ -24,7 +24,7 @@
   <div
     class="txcm-dashboardDrawer"
     class:txcm-dashboardDrawer-is-active={isActive}>
-      <DashboardNavigation />
+      <slot />
       <button
         class="txcm-dashboardDrawerClose"
         on:click={onCloseClick}>

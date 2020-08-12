@@ -216,5 +216,5 @@
 
 {#each navGroups as group, index}
   <DashboardNavigationGroup
-   {...group}/>
+   {...group} />
 {/each}

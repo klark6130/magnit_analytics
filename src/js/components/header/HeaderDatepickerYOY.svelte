@@ -3,4 +3,4 @@
 </script>
 
 <Datepicker
-  label="YoY"/>
+  label="YoY" />

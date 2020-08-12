@@ -4,6 +4,7 @@ const UI_INITIAL_STATE = {
   menu: false,
   menuDashNav: false,
   dashDrawer: false,
+  indDrawer: false,
 };
 
 let uiState;

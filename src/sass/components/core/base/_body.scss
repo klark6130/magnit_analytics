@@ -1,3 +1,5 @@
+$txcm-bodyPadding-height: 139px;
+
 body {
   position: relative;
   display: inherit;
@@ -6,6 +8,12 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+
+  &::before {
+    @include txmx-pseudo(relative);
+    width: 100%;
+    height: $txcm-bodyPadding-height;
+  }
 
   @include txmx-media(print) {
     width: auto;
