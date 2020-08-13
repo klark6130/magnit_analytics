@@ -1,0 +1,205 @@
+[
+  [
+    {
+      "type": "stepper",
+      "data": {
+        "name": "finLFL",
+        "pick": null,
+        "cancel": true,
+        "options": [
+          {
+            "label": "LFL",
+            "value": "lfl"
+          },
+          {
+            "label": "Non-LFL",
+            "value": "nonlfl"
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMA",
+        "label": "МА",
+        "pick": null,
+        "value": "ma"
+      }
+    },
+    {
+      "type": "stepper",
+      "data": {
+        "name": "finIASIFRS",
+        "pick": null,
+        "cancel": true,
+        "options": [
+          {
+            "label": "IAS 17",
+            "value": "ias17"
+          },
+          {
+            "label": "IFRS 16",
+            "value": "ifrs16"
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMM",
+        "label": "ММ",
+        "pick": null,
+        "value": "mm"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMK",
+        "label": "МК",
+        "pick": null,
+        "value": "mk"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMO",
+        "label": "МО",
+        "pick": null,
+        "value": "mo"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMS",
+        "label": "МС",
+        "pick": null,
+        "value": "ms"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMSPlus",
+        "label": "МС+",
+        "pick": null,
+        "value": "msplus"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finMAPlus",
+        "label": "МА",
+        "pick": null,
+        "value": "maPlus"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finSIA",
+        "label": "СИА",
+        "pick": null,
+        "value": "sia"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "finHQ",
+        "label": "HQ",
+        "pick": null,
+        "value": "hq"
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "finSubForm",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Подформ.",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "type": "select",
+      "data": {
+        "name": "finCounty",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Округ",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "finSubCounty",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Подокруг",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "finGroup",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Фил./гр.",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "finSubGroup",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Подфил./подгр.",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "finTO",
+        "pick": 0,
+        "options": [
+          {
+            "label": "ТО",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ]
+]

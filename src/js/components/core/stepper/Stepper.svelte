@@ -1,9 +1,9 @@
 <script>
   import StepperOption from './StepperOption.svelte';
 
+  export let pick;
   export let name;
   export let options;
-  export let pick;
   export let cancel = false;
   export let theme = null;
 </script>

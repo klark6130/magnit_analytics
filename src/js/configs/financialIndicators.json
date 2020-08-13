@@ -1,0 +1,129 @@
+[
+  {
+    "label": "Финансовые показатели",
+    "indicators": [
+      {
+        "name": "finPTO",
+        "label": "РTO",
+        "note": "РTO LFL",
+        "value": "pto",
+        "status": false
+      },
+      {
+        "name": "finAvgCheck",
+        "label": "Ср. чек",
+        "note": "Ср. чек LFL",
+        "value": "avgCheck",
+        "status": false
+      },
+      {
+        "name": "finTraffic",
+        "label": "Трафик",
+        "note": "Трафик LFL",
+        "value": "traffic",
+        "status": false
+      },
+      {
+        "name": "finLocations",
+        "label": "Кол-во объектов",
+        "note": "Торг. площадь",
+        "value": "locations",
+        "status": false
+      },
+      {
+        "name": "finMargin",
+        "label": "Front Margin",
+        "value": "frontMargin",
+        "status": false
+      },
+      {
+        "name": "finLosses",
+        "label": "Потери",
+        "value": "losses",
+        "status": false
+      },
+      {
+        "name": "finStock",
+        "label": "Тов. запас",
+        "note": "Обора-сть",
+        "value": "stock",
+        "status": false
+      },
+      {
+        "label": "Доля промо",
+        "name": "finPromo",
+        "value": "promo",
+        "status": false
+      },
+      {
+        "name": "finUSRC",
+        "label": "УС РЦ",
+        "value": "usrc",
+        "status": false
+      }
+    ]
+  }, {
+    "label": "Продажи",
+    "indicators": [
+      {
+        "name": "finPTOPlus",
+        "label": "РTO",
+        "note": "РTO LFL",
+        "value": "pto",
+        "status": false
+      },
+      {
+        "name": "finAvgCheckPlus",
+        "label": "Ср. чек",
+        "note": "Ср. чек LFL",
+        "value": "avgCheck",
+        "status": false
+      },
+      {
+        "name": "finTrafficPlus",
+        "label": "Трафик",
+        "note": "Трафик LFL",
+        "value": "traffic",
+        "status": false
+      },
+      {
+        "name": "finLocationsPlus",
+        "label": "Кол-во объектов",
+        "note": "Торг. площадь",
+        "value": "locations",
+        "status": false
+      },
+      {
+        "name": "finMarginPlus",
+        "label": "Front Margin",
+        "value": "frontMargin",
+        "status": false
+      },
+      {
+        "name": "finLossesPlus",
+        "label": "Потери",
+        "value": "losses",
+        "status": false
+      },
+      {
+        "name": "finStockPlus",
+        "label": "Тов. запас",
+        "note": "Обора-сть",
+        "value": "stock",
+        "status": false
+      },
+      {
+        "name": "finPromoPlus",
+        "label": "Доля промо",
+        "value": "promo",
+        "status": false
+      },
+      {
+        "name": "finUSRCPlus",
+        "label": "УС РЦ",
+        "value": "usrc",
+        "status": false
+      }
+    ]
+  }
+]

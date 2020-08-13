@@ -1,7 +1,7 @@
 <script>
-  import Header from '../header/Header.svelte';
-  import DashboardMenu from '../dashboardMenu/DashboardMenu.svelte';
-  import Menu from '../menu/Menu.svelte';
+  import Header from 'components/header/Header.svelte';
+  import DashboardMenu from 'components/dashboardMenu/DashboardMenu.svelte';
+  import Menu from 'components/menu/Menu.svelte';
   import FinancialDashboard from './FinancialDashboard.svelte';
   import OperationalDashboard from './OperationalDashboard.svelte';
   import ExportDashboard from './ExportDashboard.svelte';

@@ -1,0 +1,212 @@
+[
+  [
+    {
+      "type": "pick",
+      "data": {
+        "name": "opMM",
+        "label": "ММ",
+        "pick": null,
+        "value": "mm"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opMK",
+        "label": "МК",
+        "pick": null,
+        "value": "mk"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opMO",
+        "label": "МО",
+        "pick": null,
+        "value": "mo"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opMS",
+        "label": "МС",
+        "pick": null,
+        "value": "ms"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opMSPlus",
+        "label": "МС+",
+        "pick": null,
+        "value": "msplus"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opMA",
+        "label": "МА",
+        "pick": null,
+        "value": "ma"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opSIA",
+        "label": "СИА",
+        "pick": null,
+        "value": "sia"
+      }
+    },
+    {
+      "type": "pick",
+      "data": {
+        "name": "opHQ",
+        "label": "HQ",
+        "pick": null,
+        "value": "hq"
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opSubForm",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Подформ.",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "type": "select",
+      "data": {
+        "name": "opCounty",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Округ",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opSubCounty",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Подокруг",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opGroup",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Фил./гр.",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opSubGroup",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Подфил./подгр.",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opTO",
+        "pick": 0,
+        "options": [
+          {
+            "label": "ТО",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "type": "select",
+      "data": {
+        "name": "opCat",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Тов. кат.",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opGroupNumber",
+        "pick": 0,
+        "options": [
+          {
+            "label": "Гр. 20/23",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "type": "select",
+      "data": {
+        "name": "opTU",
+        "pick": 0,
+        "options": [
+          {
+            "label": "ТУ",
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "select",
+      "data": {
+        "name": "opSV",
+        "pick": 0,
+        "options": [
+          {
+            "label": "СВ",
+            "value": 0
+          }
+        ]
+      }
+    }
+  ]
+]

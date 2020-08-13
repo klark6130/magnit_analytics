@@ -2,6 +2,7 @@
   export let pick;
   export let name;
   export let index;
+  export let value;
   export let label;
 
   const id = `${name}-${index}`;
@@ -15,7 +16,7 @@
       bind:group={pick}
       {name}
       {id}
-      value={index}>
+      {value}>
     <label
       class="txcm-selectLabel"
       for={id}>

@@ -1,7 +1,8 @@
-<script>
-  import Pick from 'core/pick/Pick.svelte';
-  import Select from 'core/select/Select.svelte';
-  import Stepper from 'core/stepper/Stepper.svelte';
+<script context="module">
+  import { updateFilter, getFilterState } from 'state/filter';
+  import Pick from 'components/core/pick/Pick.svelte';
+  import Select from 'components/core/select/Select.svelte';
+  import Stepper from 'components/core/stepper/Stepper.svelte';
 
   const ELEMENTS = {
     stepper: Stepper,
@@ -9,14 +10,42 @@
     select: Select,
   };
 
-  export let element;
+  const PROPS = {
+    stepper: ['cancel', 'options'],
+    pick: ['label', 'value'],
+    select: ['options'],
+  };
 
   function pickElement(type) {
     if (ELEMENTS[type]) return ELEMENTS[type];
-    return ELEMENTS.financial;
+    return ELEMENTS.pick;
+  }
+
+  function pickProps(element) {
+    const { type, data } = element;
+    const names = PROPS[type] || PROPS.pick;
+    return names.reduce((props, name) => ({ ...props, [name]: data[name] }), {});
+  }
+</script>
+
+<script>
+  export let element;
+
+  const { data } = element;
+  const { name } = data;
+  const store = getFilterState(name);
+
+  let pick = $store;
+
+  $: updateFilterValue(pick);
+
+  function updateFilterValue() {
+    updateFilter({ [name]: pick });
   }
 </script>
 
 <svelte:component
   this={pickElement(element.type)}
-  {...element.content} />
+  {...pickProps(element)}
+  {name}
+  bind:pick={pick} />

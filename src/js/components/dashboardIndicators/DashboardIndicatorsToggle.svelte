@@ -1,5 +1,5 @@
 <script>
-  import { toggleUI } from '../../state/ui';
+  import { toggleUI } from 'state/ui';
 
   function onToggleClick() {
     toggleUI('indDrawer');

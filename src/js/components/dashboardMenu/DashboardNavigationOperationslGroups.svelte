@@ -1,38 +1,26 @@
 <script>
-  import DashboardNavigationGroup from './DashboardNavigationGroup.svelte'
-
-  const navGroups = [
-    {
-      label: 'Финансовые показатели',
-      links: [
-        {
-          label: 'Выручка',
-          href: '/',
-        }, {
-          label: 'Валовый доход',
-          href: '/',
-        }, {
-          label: 'OPEX',
-          href: '/',
-        }, {
-          label: 'EBITDA',
-          href: '/',
-        }, {
-          label: 'EBITDAR',
-          href: '/',
-        }, {
-          label: 'Чистая прибыль',
-          href: '/',
-        }, {
-          label: 'Рабочий капитал',
-          href: '/',
-        },
-      ],
-    },
-  ]
+  import { default as config } from 'configs/operationalNavigation.json';
+  import DashboardListGroup from 'components/dashboardList/DashboardListGroup.svelte';
+  import NavLink from 'components/core/navLink/NavLink.svelte';
 </script>
 
-{#each navGroups as group, index}
-  <DashboardNavigationGroup
-   {...group} />
-{/each}
+<div
+  class="txcm-dashboardNavGroup">
+    <NavLink
+      linkClass="txcm-dashboardNavLink"
+      to="/">
+        Операционный дашборд
+    </NavLink>
+    {#each config as group, index}
+      <DashboardListGroup
+        label={group.label}>
+          {#each group.links as link}
+            <NavLink
+              linkClass="txcm-dashboardNavGroupLink"
+              to={link.href}>
+                {link.label}
+            </NavLink>
+          {/each}
+      </DashboardListGroup>
+    {/each}
+</div>

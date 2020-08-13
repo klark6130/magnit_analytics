@@ -1,5 +1,5 @@
 <script>
-  import Datepicker from 'core/datepicker/Datepicker.svelte';
+  import Datepicker from 'components/core/datepicker/Datepicker.svelte';
 </script>
 
 <Datepicker />

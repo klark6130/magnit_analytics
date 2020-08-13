@@ -1,7 +1,7 @@
 <script>
   import { onDestroy } from 'svelte';
-  import Overlay from 'core/overlay/Overlay.svelte';
-  import { subscribeUI, updateUI } from '../../state/ui';
+  import { subscribeUI, updateUI } from 'state/ui';
+  import Overlay from 'components/core/overlay/Overlay.svelte';
 
   export let store;
   export let isActive = false;

@@ -1,15 +1,22 @@
 <script>
   export let pick;
   export let name;
+  export let value;
   export let label;
   export let theme = null;
+
+  function onPickChange() {
+    if (!pick) pick = value;
+    else pick = null;
+  }
 </script>
 
 <input
   class="txcm-pickInput"
   type="checkbox"
-  bind:checked={pick}
-  id={name}>
+  id={name}
+  checked={pick}
+  on:change={onPickChange}>
 <label
   class={`txcm-pick ${theme}`}
   for={name}>

@@ -1,0 +1,38 @@
+.txcm-loginForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+$txcm-loginInputHolder-width: 280px;
+
+.txcm-loginInputHolder {
+  @extend %txph-inputHolder;
+  width: $txcm-loginInputHolder-width;
+  margin: 0 0 12px;
+}
+
+.txcm-loginInput {
+  @extend %txph-inputLayoutLarge;
+
+  &:focus {
+    @extend %txph-loginInput-focus;
+  }
+}
+
+.txcm-loginLabel {
+  @extend %txph-labelLayoutLarge;
+
+  %txph-loginInput-focus + & {
+    @extend %txph-labelLayoutLarge-is-compact;
+  }
+}
+
+$txcm-loginSubmit-width: 285px;
+
+.txcm-loginSubmit {
+  @extend %txph-buttonRed;
+  @extend %txph-buttonLayoutLarge;
+  width: $txcm-loginSubmit-width;
+  margin: 12px 0 0;
+}

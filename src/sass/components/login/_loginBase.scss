@@ -1,0 +1,19 @@
+.txcm-loginPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+$txcm-loginLogo-size: 48px;
+
+.txcm-loginLogo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: $txcm-loginLogo-size;
+  height: $txcm-loginLogo-size;
+  margin: 0 0 0 ($txcm-loginLogo-size / -2);
+}

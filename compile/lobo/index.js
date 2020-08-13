@@ -8,6 +8,7 @@ const rollup = require('rollup');
 const rollupCommonJS = require('@rollup/plugin-commonjs');
 const { nodeResolve: rollupResolve } = require('@rollup/plugin-node-resolve');
 const rollupSvelte = require('rollup-plugin-svelte');
+const rollupJSON = require('rollup-plugin-json');
 const rollupIncludePaths = require('rollup-plugin-includepaths');
 const mxy = require('../mxy');
 const metallo = require('../metallo');
@@ -35,6 +36,9 @@ const ROLLUP_OPTIONS = {
       extensions: ['.js', '.svele'],
     }),
     rollupCommonJS(),
+    rollupJSON({
+      preferConst: true,
+    }),
   ],
 };
 

@@ -225,7 +225,6 @@ textarea {
   @extend %txph-formElement;
   @extend %txph-formFieldStyle;
   @extend %txph-formFieldState;
-  // @extend %txph-formPlaceholder;
   display: block;
   overflow: auto;
   height: 150px;

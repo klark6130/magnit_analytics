@@ -1,5 +1,5 @@
 <script>
-  import Stepper from 'core/stepper/Stepper.svelte';
+  import Stepper from 'components/core/stepper/Stepper.svelte';
 
   export let units = 0;
   export let options = [{

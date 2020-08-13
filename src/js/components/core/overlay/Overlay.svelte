@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { focusTrap } from '../../../utilities/focusTrap';
+  import { focusTrap } from 'utilities/focusTrap';
 
   export let isActive;
 

@@ -4,7 +4,7 @@ $txcm-dashboardListFilterIcon-color: $txgl-gray-200;
 .txcm-dashboardListFilter {
   position: relative;
   width: 100%;
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 
   &::before {
     @include txmx-pseudo;

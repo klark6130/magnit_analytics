@@ -15,7 +15,7 @@ const JS_PATHS = {
   from: ['src', 'js'],
   to: ['public', 'js'],
   buildTo: ['build', 'js'],
-  include: ['src', 'js', 'components'],
+  include: ['src', 'js'],
 };
 
 const SPRITES_PATHS = {
@@ -70,6 +70,10 @@ function collectComponents(keys) {
 
 function joinPaths(paths) {
   return path.join(...collectComponents(paths));
+}
+
+function joinMultiplePaths(paths) {
+  return paths.map(joinPaths);
 }
 
 function renderPath(object, [ key, value ]) {

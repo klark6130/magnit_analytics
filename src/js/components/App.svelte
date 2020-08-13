@@ -1,6 +1,6 @@
 <script>
   import { Router, Route, navigate } from 'svelte-routing';
-  import { initUser } from '../state/user';
+  import { initUser } from 'state/user';
   import DashboardPage from './dashboard/DashboardPage.svelte';
   import LoginPage from './pages/LoginPage.svelte';
   import LogoutPage from './pages/LogoutPage.svelte';
@@ -8,7 +8,7 @@
   import ErrorPage from './pages/ErrorPage.svelte';
   import DefaultPage from './pages/DefaultPage.svelte';
 
-  function login() {
+  function auth() {
     return Promise.resolve({
       success: true,
       result: {
@@ -25,7 +25,7 @@
   }
 
   function initialize() {
-    return login().then(next);
+    return auth().then(next);
   }
 </script>
 

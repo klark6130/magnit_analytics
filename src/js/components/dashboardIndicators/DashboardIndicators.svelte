@@ -1,6 +1,12 @@
 <script>
-  import DashboardListFilter from '../dashboardListFilter/DashboardListFilter.svelte';
+  import { initIndicators } from 'state/indicators';
+  import DashboardListFilter from 'components/dashboardList/DashboardListFilter.svelte';
+  import DashboardIndicatorsActive from './DashboardIndicatorsActive.svelte';
   import DashboardIndicatorList from './DashboardIndicatorList.svelte';
+
+  export let config;
+
+  initIndicators(config);
 </script>
 
 <div
@@ -8,4 +14,7 @@
     Добавить показатели
 </div>
 <DashboardListFilter />
-<DashboardIndicatorList />
+<DashboardIndicatorsActive
+  {config} />
+<DashboardIndicatorList
+  {config} />

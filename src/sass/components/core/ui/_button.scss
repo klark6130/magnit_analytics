@@ -25,6 +25,15 @@ $txph-buttonLayout-padding: 12px;
   text-align: center;
 }
 
+$txph-buttonLayoutLarge-height: 48px;
+$txph-buttonLayoutLarge-padding: 12px;
+
+%txph-buttonLayoutLarge {
+  height: $txph-buttonLayoutLarge-height;
+  padding: 0 $txph-buttonLayoutLarge-padding;
+  text-align: center;
+}
+
 $txph-buttonBorder-color: $txgl-white;
 $txph-buttonBorder-borderColor: $txgl-gray-300;
 $txph-buttonBorder-hover-color: $txgl-red;
@@ -46,5 +55,24 @@ $txph-buttonBorder-active-borderColor: $txgl-red;
   &:active {
     border-color: $txph-buttonBorder-active-borderColor;
     color: $txph-buttonBorder-active-color;
+  }
+}
+
+$txph-buttonRed-color: $txgl-white-900;
+$txph-buttonRed-background: $txgl-red;
+$txph-buttonRed-hover-background: $txgl-red-600;
+$txph-buttonRed-active-background: $txgl-red-400;
+
+%txph-buttonRed {
+  color: $txph-buttonRed-color;
+  background: $txph-buttonRed-background;
+  transition: background $txgl-transition, color $txgl-transition;
+
+  &:hover {
+    background: $txph-buttonRed-hover-background;
+  }
+
+  &:active {
+    background: $txph-buttonRed-active-background;
   }
 }

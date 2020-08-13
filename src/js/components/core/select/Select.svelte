@@ -1,9 +1,9 @@
 <script>
   import SelectOption from './SelectOption.svelte';
 
+  export let pick;
   export let name;
   export let options;
-  export let pick;
   export let theme = null;
 
   function renderToggleLabel() {

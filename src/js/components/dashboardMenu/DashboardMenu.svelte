@@ -1,5 +1,5 @@
 <script>
-  import DashboardDrawer from '../dashboardDrawer/DashboardDrawer.svelte';
+  import DashboardDrawer from 'components/dashboardDrawer/DashboardDrawer.svelte';
   import DashboardNavigation from './DashboardNavigation.svelte';
 </script>
 

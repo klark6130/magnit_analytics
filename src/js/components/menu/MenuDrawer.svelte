@@ -1,7 +1,7 @@
 <script>
   import { onDestroy } from 'svelte';
-  import NavLink from 'core/navLink/NavLink.svelte';
-  import Overlay from 'core/overlay/Overlay.svelte';
+  import NavLink from 'components/core/navLink/NavLink.svelte';
+  import Overlay from 'components/core/overlay/Overlay.svelte';
   import { subscribeUI } from '../../state/ui';
   import MenuDrawerNavigation from './MenuDrawerNavigation.svelte';
   import MenuDrawerTemplates from './MenuDrawerTemplates.svelte';

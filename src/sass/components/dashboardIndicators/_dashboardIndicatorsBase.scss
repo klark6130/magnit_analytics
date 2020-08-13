@@ -14,3 +14,11 @@ $txcm-dashboardIndicatorsHeader-height: 32px;
   background: inherit;
   font-weight: bold;
 }
+
+.txcm-dashboardIndicatorsActive {
+  margin: 0 0 16px;
+
+  &:empty {
+    margin: 0;
+  }
+}

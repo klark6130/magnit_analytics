@@ -1,5 +1,5 @@
 <script>
-  import NavLink from 'core/navLink/NavLink.svelte';
+  import NavLink from 'components/core/navLink/NavLink.svelte';
   import { toggleUI } from '../../state/ui';
 
   function onToggleClick() {
