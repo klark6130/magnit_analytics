@@ -3,7 +3,7 @@
   export let name;
   export let value;
   export let label;
-  export let theme = null;
+  export let theme = '';
 
   function onPickChange() {
     if (!pick) pick = value;

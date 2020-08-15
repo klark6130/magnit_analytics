@@ -52,6 +52,7 @@ bower_components/
 public/
 build/
 coverage/
+compile/antimonitor/sprites
 .editorconfig
 .browserslistrc
 .eslintrc

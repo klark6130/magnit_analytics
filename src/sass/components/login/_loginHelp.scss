@@ -1,13 +1,13 @@
-.txcm-loginHelp {
+.txcm-authHelp {
   margin: 70px 0 0;
   text-align: center;
 }
 
-$txcm-loginHelpLink-color: $txgl-red;
-$txcm-loginHelpLink-hover-color: $txgl-red-600;
-$txcm-loginHelpLink-active-color: $txgl-red-400;
+$txcm-authHelpLink-color: $txgl-red;
+$txcm-authHelpLink-hover-color: $txgl-red-600;
+$txcm-authHelpLink-active-color: $txgl-red-400;
 
-.txcm-loginHelpLink {
-  @include txmx-link($txcm-loginHelpLink-color, $txcm-loginHelpLink-color, $txcm-loginHelpLink-hover-color, $txcm-loginHelpLink-active-color);
+.txcm-authHelpLink {
+  @include txmx-link($txcm-authHelpLink-color, $txcm-authHelpLink-color, $txcm-authHelpLink-hover-color, $txcm-authHelpLink-active-color);
   text-decoration: none;
 }

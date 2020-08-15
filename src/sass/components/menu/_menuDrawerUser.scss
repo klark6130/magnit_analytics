@@ -25,10 +25,33 @@ $txcm-menuDrawerUserImage-size: 30px;
 }
 
 $txcm-menuDrawerUserLink-color: $txgl-white-900;
+$txcm-menuDrawerUserLink-hover-color: $txgl-gray-100;
 
 .txcm-menuDrawerUserLink {
-  @include txmx-link($txcm-menuDrawerUserLink-color);
+  @include txmx-link($txcm-menuDrawerUserLink-color, $txcm-menuDrawerUserLink-color, $txcm-menuDrawerUserLink-hover-color, $txcm-menuDrawerUserLink-hover-color);
   display: flex;
   align-items: center;
   text-decoration: none;
+}
+
+$txcm-menuDrawerUserLogout-size: 32px;
+$txcm-menuDrawerUserLogout-color: $txgl-white-900;
+$txcm-menuDrawerUserLogout-hover-color: $txgl-gray-100;
+
+.txcm-menuDrawerUserLogout {
+  @include txmx-link($txcm-menuDrawerUserLogout-color, $txcm-menuDrawerUserLogout-color, $txcm-menuDrawerUserLogout-hover-color, $txcm-menuDrawerUserLogout-hover-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $txcm-menuDrawerUserLogout-size;
+  height: $txcm-menuDrawerUserLogout-size;
+  text-decoration: none;
+}
+
+$txcm-menuDrawerLogoutIcon-size: 17px;
+
+.txcm-menuDrawerLogoutIcon {
+  width: $txcm-menuDrawerLogoutIcon-size;
+  height: $txcm-menuDrawerLogoutIcon-size;
+  fill: currentColor;
 }

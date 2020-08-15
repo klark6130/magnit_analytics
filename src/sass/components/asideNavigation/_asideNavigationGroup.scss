@@ -1,0 +1,19 @@
+$txcm-asideNavGroupLink-height: 32px;
+$txcm-asideNavGroupLink-color: $txgl-gray-100;
+$txcm-asideNavGroupLink-hover-color: $txgl-white;
+$txcm-asideNavGroupLink-active-color: $txgl-white-900;
+
+.txcm-asideNavGroupLink {
+  @extend %txph-dashboardNavMark;
+  @include txmx-link($txcm-asideNavGroupLink-color, $txcm-asideNavGroupLink-color, $txcm-asideNavGroupLink-hover-color, $txcm-asideNavGroupLink-active-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $txcm-asideNavGroupLink-height;
+  text-decoration: none;
+
+  &-is-active {
+    @extend %txph-dashboardNavMark-is-active;
+    @include txmx-link($txcm-asideNavGroupLink-active-color);
+  }
+}

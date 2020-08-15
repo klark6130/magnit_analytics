@@ -3,8 +3,8 @@ import { initState, updateData, changeData, toggleData, getStateData, getState, 
 const UI_INITIAL_STATE = {
   menu: false,
   menuDashNav: false,
-  dashDrawer: false,
-  indDrawer: false,
+  aside: false,
+  indicators: false,
 };
 
 let uiState;

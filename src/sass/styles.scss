@@ -1,11 +1,12 @@
 @import 'components/core/core';
 
-@import 'components/dashboardDrawer/dashboardDrawer';
-@import 'components/dashboardFilter/dashboardFilter';
-@import 'components/dashboardIndicators/dashboardIndicators';
-@import 'components/dashboardList/dashboardList';
-@import 'components/dashboardNavigation/dashboardNavigation';
+@import 'components/asideNavigation/asideNavigation';
 @import 'components/datepicker/datepicker';
+@import 'components/drawer/drawer';
+@import 'components/filter/filter';
+@import 'components/indicators/indicators';
 @import 'components/header/header';
+@import 'components/list/list';
 @import 'components/login/login';
 @import 'components/menu/menu';
+@import 'components/sprites/sprites';

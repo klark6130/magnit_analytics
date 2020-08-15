@@ -5,7 +5,7 @@
   export let name;
   export let options;
   export let cancel = false;
-  export let theme = null;
+  export let theme = '';
 </script>
 
 <ul

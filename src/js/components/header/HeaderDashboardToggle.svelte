@@ -2,7 +2,7 @@
   import { toggleUI } from 'state/ui';
 
   function onToggleClick() {
-    toggleUI('dashDrawer');
+    toggleUI('aside');
   }
 </script>
 
@@ -10,4 +10,9 @@
   class="txcm-dashboardToggle"
   on:click={onToggleClick}>
     Финансовый дашборд
+    <svg
+      class="txcm-dashboardToggleArrow">
+        <use
+          xlink:href="#txspt-icons-fatArrow" />
+    </svg>
 </button>

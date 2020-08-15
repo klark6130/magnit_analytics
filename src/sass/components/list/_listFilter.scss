@@ -1,0 +1,74 @@
+.txcm-listFilter {
+  position: relative;
+  margin: 0 -8px 12px;
+}
+
+.txcm-listFilterInput {
+  width: 100%;
+  padding: 0 31px;
+
+  &:focus {
+    @extend %txph-dashboardListFilterInput-focus;
+  }
+}
+
+$txcm-listFilterIcon-size: 10px;
+$txcm-listFilterIcon-color: $txgl-gray-200;
+
+.txcm-listFilterIcon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: $txcm-listFilterIcon-size;
+  height: $txcm-listFilterIcon-size;
+  margin: ($txcm-listFilterIcon-size / -2) 0 0 ($txcm-listFilterIcon-size / -2);
+  pointer-events: none;
+  fill: $txcm-listFilterIcon-color;
+}
+
+$txcm-listFilterCancel-width: 31px;
+$txcm-listFilterCancel-height: 32px;
+
+$txcm-listFilterCancelIcon-width: 7px;
+$txcm-listFilterCancelIcon-height: 1px;
+$txcm-listFilterCancelIcon-color: $txgl-gray-100;
+
+.txcm-listFilterCancel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  width: $txcm-listFilterCancel-width;
+  height: $txcm-listFilterCancel-height;
+  background: none;
+  text-indent: -10000px;
+  opacity: 0;
+  transition: opacity $txgl-transition-default, visibility $txgl-transition-default step-end;
+
+  &::before,
+  &::after {
+    @include txmx-pseudo;
+    top: 50%;
+    left: 50%;
+    width: $txcm-listFilterCancelIcon-width;
+    height: $txcm-listFilterCancelIcon-height;
+    margin: ($txcm-listFilterCancelIcon-height / -2) 0 0 ($txcm-listFilterCancelIcon-width / -2);
+    color: $txcm-listFilterCancelIcon-color;
+    background: currentColor;
+    transform-origin: 50% 50%;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  %txph-dashboardListFilterInput-focus + & {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $txgl-transition-default, visibility $txgl-transition-default step-start;
+  }
+}

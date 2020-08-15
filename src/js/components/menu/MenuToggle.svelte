@@ -1,5 +1,5 @@
 <script>
-  import { toggleUI, updateUI } from '../../state/ui';
+  import { toggleUI, updateUI } from 'state/ui';
 
   function onToggleClick() {
     toggleUI('menu');

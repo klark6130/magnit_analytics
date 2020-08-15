@@ -23,6 +23,7 @@ $txcm-menuDrawer-background: $txgl-gray-500;
 }
 
 $txcm-menuLogo-size: 24px;
+$txcm-menuLogo-color: $txgl-white-900;
 
 .txcm-menuLogo {
   position: absolute;
@@ -31,6 +32,7 @@ $txcm-menuLogo-size: 24px;
   display: block;
   width: $txcm-menuLogo-size;
   height: $txcm-menuLogo-size;
+  fill: $txcm-menuLogo-color;
 }
 
 $txcm-menuDrawerLanguage-size: 32px;

@@ -7,6 +7,10 @@ a {
   touch-action: manipulation;
   transition: color $txgl-transition;
 
+  &:focus {
+    outline: none;
+  }
+
   @include txmx-media(coarse) {
     @include txmx-link($txgl-link, $txgl-visited, $txgl-link, $txgl-link);
   }

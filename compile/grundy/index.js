@@ -1,9 +1,11 @@
 /* eslint no-process-env: "off" */
 /* eslint no-use-before-define: "off" */
 
-const chalk = require('chalk');
 const fs = require('fs').promises;
 const path = require('path');
+const chalk = require('chalk');
+const glob = require('glob');
+const metallo = require('../metallo');
 const mxy = require('../mxy');
 
 const ICON = path.join(__dirname, 'grundy.jpg');
@@ -25,6 +27,7 @@ const MARKUP = `
   </head>
 
   <body>
+    <!-- SPRITES -->
     <script defer src="/js/scripts.js"></script>
   </body>
 
@@ -48,8 +51,23 @@ function generateMarkupName() {
   return process.env.npm_package_name.split('/').pop();
 }
 
+function readSprite(where) {
+  return fs.readFile(where, { encoding: 'utf-8' });
+}
+
 function generateMarkup() {
-  return Promise.resolve(MARKUP);
+  return new Promise((resolve) => {
+    const from = `${metallo.getPath('sprites').to}**/*.svg`;
+    glob(from, (error, matches) => {
+      if (matches.length > 0) {
+        Promise.all(matches.map(readSprite))
+          .then(sprites => sprites.join(''))
+          .then(result => result.replace('<svg>', '<svg class="txcm-sprites">'))
+          .then(result => MARKUP.replace('<!-- SPRITES -->', result))
+          .then((result) => { resolve(result); });
+      } else resolve(MARKUP.replace('    <!-- SPRITES -->\n', ''));
+    });
+  });
 }
 
 function checkDirectory(where) {

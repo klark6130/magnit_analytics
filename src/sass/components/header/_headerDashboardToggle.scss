@@ -25,3 +25,8 @@ $txcm-dashboardToggleIcon-background: $txgl-gray-400;
     background: $txcm-dashboardToggleIcon-background;
   }
 }
+
+.txcm-dashboardToggleArrow {
+  @extend %txph-fatArrow;
+  left: ($txcm-dashboardToggleIcon-size / 2);
+}

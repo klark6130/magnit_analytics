@@ -1,5 +1,5 @@
-import App from './components/App.svelte';
-import { initUI } from './state/ui';
+import { initUI } from 'state/ui';
+import App from 'components/App.svelte';
 
 function startApp() {
   initUI();

@@ -6,7 +6,7 @@ $txcm-menuToggleBar-width: 12px;
 $txcm-menuToggleBar-height: 2px;
 
 .txcm-menuToggle {
-  @include txmx-layer(over, 1);
+  @include txmx-layer(over, -1);
   @include txmx-link($txcm-menuToggle-color, $txcm-menuToggle-color, $txcm-menuToggle-hover-color, $txcm-menuToggle-hover-color);
   position: fixed;
   top: 20px;
@@ -24,16 +24,19 @@ $txcm-menuToggleBar-height: 2px;
     top: 50%;
     left: 50%;
     width: $txcm-menuToggleBar-width;
-    height: $txcm-menuToggleBar-height;
-    border-radius: 2px;
-    background: currentColor;
   }
 
   &::before {
-    margin: -4px 0 0 ($txcm-menuToggleBar-width / -2);
+    height: $txcm-menuToggleBar-height;
+    margin: ($txcm-menuToggleBar-height / -2) 0 0 ($txcm-menuToggleBar-width / -2);
+    background: currentColor;
   }
 
   &::after {
-    margin: 3px 0 0 ($txcm-menuToggleBar-width / -2);
+    height: ($txcm-menuToggleBar-height + 4px);
+    border-width: $txcm-menuToggleBar-height 0;
+    border-style: solid;
+    border-color: currentColor;
+    margin: (($txcm-menuToggleBar-height * 3 + 4px) / -2) 0 0 ($txcm-menuToggleBar-width / -2);
   }
 }

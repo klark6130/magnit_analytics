@@ -6,9 +6,9 @@ $txcm-datepickerToggle-active-color: $txgl-white-900;
 $txcm-datepickerToggle-active-background: $txgl-gray-200;
 
 .txcm-datepickerToggle {
+  position: relative;
   height: $txgl-filter-height;
   padding: 0 28px 0 12px;
-  margin: 0 $txgl-filter-margin;
   color: $txcm-datepickerToggle-color;
   background: $txcm-datepickerToggle-background;
 
@@ -21,4 +21,22 @@ $txcm-datepickerToggle-active-background: $txgl-gray-200;
     color: $txcm-datepickerToggle-active-color;
     background: $txcm-datepickerToggle-active-background;
   }
+
+  &-is-active {
+    color: $txcm-datepickerToggle-active-color;
+    background: $txcm-datepickerToggle-active-background;
+
+    &:hover {
+      color: $txcm-datepickerToggle-active-color;
+      background: $txcm-datepickerToggle-active-background;
+    }
+  }
+}
+
+$txcm-datepickerToggleIcon-width: 6px;
+$txcm-datepickerToggleIcon-height: 4px;
+
+.txcm-datepickerToggleIcon {
+  @extend %txph-fatArrow;
+  right: ($txgl-filter-height / 2);
 }

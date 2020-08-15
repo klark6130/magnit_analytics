@@ -1,23 +1,13 @@
 <script>
   import { Router, Route, navigate } from 'svelte-routing';
+  import { user } from 'utilities/api';
   import { initUser } from 'state/user';
-  import DashboardPage from './dashboard/DashboardPage.svelte';
-  import LoginPage from './pages/LoginPage.svelte';
-  import LogoutPage from './pages/LogoutPage.svelte';
-  import LoadingPage from './pages/LoadingPage.svelte';
-  import ErrorPage from './pages/ErrorPage.svelte';
+  import AuthPage from './pages/AuthPage.svelte';
+  import DashboardPage from './pages/DashboardPage.svelte';
   import DefaultPage from './pages/DefaultPage.svelte';
-
-  function auth() {
-    return Promise.resolve({
-      success: true,
-      result: {
-        name: 'Buzz Killington',
-        photo: 'https://picsum.photos/30/30',
-        templates: [],
-      },
-    });
-  }
+  import ErrorPage from './pages/ErrorPage.svelte';
+  import LoadingPage from './pages/LoadingPage.svelte';
+  import LogoutPage from './pages/LogoutPage.svelte';
 
   function next({ success, result }) {
     if (success) initUser(result);
@@ -25,7 +15,7 @@
   }
 
   function initialize() {
-    return auth().then(next);
+    return user().then(next);
   }
 </script>
 
@@ -38,7 +28,7 @@
         component={DashboardPage} />
       <Route
         path="/login"
-        component={LoginPage} />
+        component={AuthPage} />
       <Route
         path="/logout"
         component={LogoutPage} />

@@ -43,3 +43,11 @@ $txcm-selectToggle-active-background: $txgl-gray-200;
   position: absolute;
   left: -10000px;
 }
+
+$txcm-selectToggleIcon-width: 6px;
+$txcm-selectToggleIcon-height: 4px;
+
+.txcm-selectToggleIcon {
+  @extend %txph-fatArrow;
+  right: ($txgl-filter-height / 2);
+}

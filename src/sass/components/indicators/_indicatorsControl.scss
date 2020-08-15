@@ -1,0 +1,65 @@
+.txcm-indicatorsInput {
+  position: absolute;
+  left: -10000px;
+
+  &:checked {
+    @extend %txph-indicatorsInput-checked;
+  }
+}
+
+$txcm-indicatorsControl-height: 32px;
+$txcm-indicatorsControl-color: $txgl-gray-100;
+$txcm-indicatorsControl-hover-color: $txgl-white-900;
+$txcm-indicatorsControl-active-color: $txgl-white-900;
+
+.txcm-indicatorsControl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: $txcm-indicatorsControl-height;
+  color: $txcm-indicatorsControl-color;
+  transition: color $txgl-transition-default;
+
+  &:hover {
+    color: $txcm-indicatorsControl-hover-color;
+  }
+
+  &:active {
+    color: $txcm-indicatorsControl-active-color;
+  }
+
+  %txph-indicatorsInput-checked + & {
+    color: $txcm-indicatorsControl-active-color;
+  }
+}
+
+$txcm-indicatorsNote-color: $txgl-gray-100;
+
+.txcm-indicatorsNote {
+  color: $txcm-indicatorsNote-color;
+
+  &::before {
+    @include txmx-pseudo(relative, inline, '/');
+  }
+}
+
+$txcm-indicatorsControlIcon-width: 9px;
+$txcm-indicatorsControlIcon-height: 6px;
+$txcm-indicatorsControlIcon-color: $txgl-red;
+
+.txcm-indicatorsControlIcon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: $txcm-indicatorsControlIcon-width;
+  height: $txcm-indicatorsControlIcon-height;
+  margin: ($txcm-indicatorsControlIcon-height / -2) 0 0;
+  color: $txcm-indicatorsControlIcon-color;
+  opacity: 0;
+  transition: opacity $txgl-transition-default;
+  fill: currentColor;
+
+  &-is-visible {
+    opacity: 1;
+  }
+}

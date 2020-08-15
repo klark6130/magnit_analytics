@@ -4,7 +4,7 @@
   export let pick;
   export let name;
   export let options;
-  export let theme = null;
+  export let theme = '';
 
   function renderToggleLabel() {
     return options[pick].label;
@@ -16,6 +16,11 @@
     <button
       class="txcm-selectToggle">
         {renderToggleLabel(pick)}
+        <svg
+          class="txcm-selectToggleIcon">
+            <use
+              xlink:href="#txspt-icons-fatArrow" />
+        </svg>
     </button>
     <ul
       class="txcm-selectOptions">

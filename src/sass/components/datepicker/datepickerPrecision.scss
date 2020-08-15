@@ -1,0 +1,45 @@
+$txcm-datepickerPrecision-color: $txgl-gray-100;
+
+.txcm-datepickerPrecision {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 0 15px;
+  color: $txcm-datepickerPrecision-color;
+}
+
+.txcm-datepickerPrecisionOptions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 10px;
+}
+
+.txcm-datepickerPrecisionInput {
+  position: absolute;
+  left: -10000px;
+
+  &:checked {
+    @extend %txph-datepickerPrecisionInput;
+  }
+}
+
+$txcm-datepickerPrecisionLabel-width: 30px;
+$txcm-datepickerPrecisionLabel-height: 25px;
+$txcm-datepickerPrecisionLabel-checked-color: $txgl-black;
+$txcm-datepickerPrecisionLabel-checked-background: $txgl-white-900;
+
+.txcm-datepickerPrecisionLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: $txcm-datepickerPrecisionLabel-width;
+  height: $txcm-datepickerPrecisionLabel-height;
+  border-radius: $txgl-form-borderRadius;
+  transition: color $txgl-transition-default, background $txgl-transition-default;
+
+  %txph-datepickerPrecisionInput + & {
+    color: $txcm-datepickerPrecisionLabel-checked-color;
+    background: $txcm-datepickerPrecisionLabel-checked-background;
+  }
+}

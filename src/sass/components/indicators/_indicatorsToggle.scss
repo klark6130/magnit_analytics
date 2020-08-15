@@ -1,0 +1,16 @@
+.txcm-indicatorsToggle {
+  @extend %txph-buttonLayout;
+  @extend %txph-buttonBorder;
+  position: absolute;
+  top: 167px;
+  left: $txgl-gap;
+}
+
+$txcm-indicatorsToggleIcon-size: 9px;
+
+.txcm-indicatorsToggleIcon {
+  @extend %txph-buttonIcon;
+  width: $txcm-indicatorsToggleIcon-size;
+  height: $txcm-indicatorsToggleIcon-size;
+  fill: currentColor;
+}

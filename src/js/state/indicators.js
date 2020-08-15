@@ -31,7 +31,6 @@ export function initIndicators(config) {
 }
 
 export function updateIndicators(update) {
-  console.log(update);
   updateData(indicatorsState, update);
 }
 

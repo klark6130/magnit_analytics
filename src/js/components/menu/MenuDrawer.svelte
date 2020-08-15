@@ -1,41 +1,53 @@
 <script>
-  import { onDestroy } from 'svelte';
   import NavLink from 'components/core/navLink/NavLink.svelte';
   import Overlay from 'components/core/overlay/Overlay.svelte';
-  import { subscribeUI } from '../../state/ui';
-  import MenuDrawerNavigation from './MenuDrawerNavigation.svelte';
-  import MenuDrawerTemplates from './MenuDrawerTemplates.svelte';
-  import MenuDrawerUser from './MenuDrawerUser.svelte';
-  import MenuDrawerDashboardNavigation from './MenuDrawerDashboardNavigation.svelte';
+  import { getUIState } from 'state/ui';
+  import MenuNavigation from './MenuNavigation.svelte';
+  import MenuTemplates from './MenuTemplates.svelte';
+  import MenuUser from './MenuUser.svelte';
+  import MenuDashboardNavigation from './MenuDashboardNavigation.svelte';
 
-  let isActive = false;
+  const menu = getUIState('menu');
 
-  const unsubscribeUI = subscribeUI('menu', onMenuChange);
+  $: isActive = $menu;
 
-  function onMenuChange(update) {
-    isActive = update;
+  function close() {
+    $menu = false;
   }
 
-  onDestroy(unsubscribeUI);
+  function onCloseClick() {
+    close();
+  }
+
+  function onOverayClose() {
+    close();
+  }
 </script>
 
 <Overlay
-  {isActive}>
+  {isActive}
+  on:overlayclose={onOverayClose}>
     <div
       class="txcm-menuDrawer"
       class:txcm-menuDrawer-is-active={isActive}>
-        <img
-          class="txcm-menuLogo"
-          src="https://picsum.photos/24/24"
-          alt="Магнит">
+        <svg
+          class="txcm-menuLogo">
+            <use
+              xlink:href="#txspt-icons-logo" />
+        </svg>
         <NavLink
           linkClass="txcm-menuDrawerLanguage"
           to="/">
             en
         </NavLink>
-        <MenuDrawerNavigation />
-        <MenuDrawerTemplates />
-        <MenuDrawerUser />
-        <MenuDrawerDashboardNavigation />
+        <MenuNavigation />
+        <MenuTemplates />
+        <MenuUser />
+        <MenuDashboardNavigation />
+        <button
+          class="txcm-drawerClose"
+          on:click={onCloseClick}>
+            Закрыть
+        </button>
     </div>
 </Overlay>

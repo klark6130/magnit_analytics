@@ -1,38 +1,46 @@
-.txcm-loginForm {
+.txcm-authForm {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-$txcm-loginInputHolder-width: 280px;
+$txcm-authInputHolder-width: 280px;
 
-.txcm-loginInputHolder {
+.txcm-inputHolderAuth {
   @extend %txph-inputHolder;
-  width: $txcm-loginInputHolder-width;
+  width: $txcm-authInputHolder-width;
   margin: 0 0 12px;
 }
 
-.txcm-loginInput {
+.txcm-inputAuth {
   @extend %txph-inputLayoutLarge;
 
   &:focus {
-    @extend %txph-loginInput-focus;
+    @extend %txph-authInput-focus;
+  }
+
+  &-is-filled {
+    @extend %txph-authInput-is-filled;
   }
 }
 
-.txcm-loginLabel {
+.txcm-inputLabelAuth {
   @extend %txph-labelLayoutLarge;
 
-  %txph-loginInput-focus + & {
+  %txph-authInput-focus + & {
+    @extend %txph-labelLayoutLarge-is-compact;
+  }
+
+  %txph-authInput-is-filled + & {
     @extend %txph-labelLayoutLarge-is-compact;
   }
 }
 
-$txcm-loginSubmit-width: 285px;
+$txcm-authSubmit-width: 285px;
 
-.txcm-loginSubmit {
+.txcm-authSubmit {
   @extend %txph-buttonRed;
   @extend %txph-buttonLayoutLarge;
-  width: $txcm-loginSubmit-width;
+  width: $txcm-authSubmit-width;
   margin: 12px 0 0;
 }

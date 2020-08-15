@@ -4,20 +4,34 @@
 }
 
 $txcm-navigationLink-size: 32px;
-$txcm-navigationLink-color: $txgl-white;
+$txcm-navigationLink-color: $txgl-white-900;
 $txcm-navigationLink-hover-color: $txgl-gray-100;
 
 .txcm-navigationLink {
   @include txmx-link($txcm-navigationLink-color, $txcm-navigationLink-color, $txcm-navigationLink-hover-color, $txcm-navigationLink-hover-color);
   display: inherit;
   align-items: inherit;
+  justify-content: center;
   height: $txcm-navigationLink-size;
   min-width: $txcm-navigationLink-size;
   margin: 0 0 0 16px;
   text-decoration: none;
 }
 
+$txcm-navigationImage-size: 30px;
+
 .txcm-navigationImage {
   display: block;
+  width: $txcm-navigationImage-size;
+  height: $txcm-navigationImage-size;
   border-radius: 50%;
+}
+
+$txcm-navigationExportIcon-width: 18px;
+$txcm-navigationExportIcon-height: 15px;
+
+.txcm-navigationExportIcon {
+  width: $txcm-navigationExportIcon-width;
+  height: $txcm-navigationExportIcon-height;
+  fill: currentColor;
 }

@@ -19,6 +19,7 @@ const JS_PATHS = {
 };
 
 const SPRITES_PATHS = {
+  from: ['src', 'sprites'],
   to: ['public', 'sprites'],
   buildTo: ['build', 'sprites'],
 };
