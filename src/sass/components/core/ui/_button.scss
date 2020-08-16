@@ -73,10 +73,12 @@ $txph-buttonRed-active-background: $txgl-red-400;
   transition: background $txgl-transition, color $txgl-transition;
 
   &:hover {
+    color: $txph-buttonRed-color;
     background: $txph-buttonRed-hover-background;
   }
 
   &:active {
+    color: $txph-buttonRed-color;
     background: $txph-buttonRed-active-background;
   }
 }

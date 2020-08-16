@@ -18,6 +18,10 @@ $txcm-datepickerQuarters-width: 42px;
   @extend %txph-buttonLayoutLarge;
   @extend %txph-buttonBorder;
   width: 100%;
+
+  &-is-active {
+    @extend %txph-buttonRed;
+  }
 }
 
 $txcm-datepickerMonths-width: 228px;
@@ -38,8 +42,18 @@ $txcm-datepickerMonths-width: 228px;
   margin: 0;
 }
 
+$txcm-datepickerMonthButton-highlighted-background: $txgl-gray-300;
+
 .txcm-datepickerMonthButton {
   @extend %txph-buttonLayoutLarge;
   @extend %txph-buttonBorder;
   width: 100%;
+
+  &-is-highlighted {
+    background: $txcm-datepickerMonthButton-highlighted-background;
+  }
+
+  &-is-active {
+    @extend %txph-buttonRed;
+  }
 }

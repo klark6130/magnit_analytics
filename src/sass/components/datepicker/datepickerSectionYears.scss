@@ -18,4 +18,8 @@
   @extend %txph-buttonLayoutLarge;
   @extend %txph-buttonBorder;
   width: 100%;
+
+  &-is-active {
+    @extend %txph-buttonRed;
+  }
 }

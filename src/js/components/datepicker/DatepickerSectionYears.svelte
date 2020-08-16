@@ -1,7 +1,10 @@
 <script>
-  const years = [2017, 2018, 2019, 2020, 2021, 2022];
+  import DatepickerOptionsYears from './DatepickerOptionsYears.svelte';
 
   export let precision;
+  export let year;
+
+  export let yearOptions;
 
   function renderStatus() {
     if (precision === 4) return 'txcm-datepickerSection-years-is-active';
@@ -11,16 +14,8 @@
 
 <div
   class={`txcm-datepickerSection ${renderStatus(precision)}`}>
-    <ul
-      class="txcm-datepickerYears">
-        {#each years as year}
-          <li
-            class="txcm-datepickerYear">
-              <button
-                class="txcm-datepickerYearButton">
-                  {year}
-              </button>
-          </li>
-        {/each}
-    </ul>
+    <DatepickerOptionsYears
+      bind:precision
+      bind:year
+      {yearOptions} />
 </div>

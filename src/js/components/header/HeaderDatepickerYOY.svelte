@@ -3,5 +3,5 @@
 </script>
 
 <Datepicker
-  label="YoY"
+  note="YoY"
   name="dateYoY" />

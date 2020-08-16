@@ -2,9 +2,9 @@
   @include txmx-fontSize(14px);
   position: relative;
   display: flex;
+  order: -10;
   align-items: center;
   justify-content: space-between;
-  align-self: flex-start;
   width: 100%;
   margin: -12px 0 2px;
 }

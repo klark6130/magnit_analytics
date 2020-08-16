@@ -1,22 +1,31 @@
 <script>
-  import DatepickerPrecisionOption from './DatepickerPrecisionOption.svelte';
-
   export let precision;
-  export let name;
+  export let precisionOptions;
 
-  const options = ['D', 'W', 'M', 'Q', 'Y'];
+  function isActive(index) {
+    return index === precision;
+  }
+
+  function onOptionClick({ target }) {
+    precision = parseInt(target.dataset.option, 10);
+  }
 </script>
 
 <div class="txcm-datepickerPrecision">
   Грануляция
-  <div
+  <ul
     class="txcm-datepickerPrecisionOptions">
-      {#each options as label, index}
-        <DatepickerPrecisionOption
-          bind:precision
-          {name}
-          {label}
-          {index}/>
+      {#each precisionOptions as precisionOption, index}
+        <li
+          class="txcm-datepickerPrecisionOption">
+            <button
+              class="txcm-datepickerPrecisionButton"
+              class:txcm-datepickerPrecisionButton-is-active={isActive(index, precision)}
+              data-option={index}
+              on:click={onOptionClick}>
+                {precisionOption}
+            </button>
+        </li>
       {/each}
-  </div>
+  </ul>
 </div>

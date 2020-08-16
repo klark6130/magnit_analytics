@@ -4,9 +4,19 @@
   import DatepickerSectionYears from './DatepickerSectionYears.svelte';
   import DatepickerPrecision from './DatepickerPrecision.svelte';
 
-  export let precision;
-  export let name;
   export let isActive;
+
+  export let precision;
+  export let day;
+  export let week;
+  export let month;
+  export let quarter;
+  export let year;
+
+  export let precisionOptions;
+  export let monthOptions;
+  export let quarterOptions;
+  export let yearOptions;
 </script>
 
 <div
@@ -16,15 +26,29 @@
     <div
       class="txcm-datepickerSections">
         <DatepickerSectionMonth
-          {precision} />
+          bind:precision
+          bind:day
+          bind:week
+          bind:month
+          bind:year
+          {monthOptions}
+          {yearOptions} />
         <DatepickerSectionQuarters
-          {precision} />
+          bind:precision
+          bind:month
+          bind:quarter
+          bind:year
+          {monthOptions}
+          {quarterOptions}
+          {yearOptions} />
         <DatepickerSectionYears
-          {precision} />
+          bind:precision
+          bind:year
+          {yearOptions} />
     </div>
     <DatepickerPrecision
       bind:precision
-      {name} />
+      {precisionOptions} />
     <button
       class="txcm-datepickerSubmit">
         Выбрать

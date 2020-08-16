@@ -1,5 +1,6 @@
 <script>
-  export let label = null;
+  export let label;
+  export let note = null;
   export let isActive;
 
   $: updateEvents(isActive);
@@ -40,8 +41,8 @@
   }
 
   function renderToggleLabel() {
-    if (label) return `Март 2020 (${label})`;
-    return 'Март 2020';
+    if (note) return `${label} (${note})`;
+    return label;
   }
 
   function onToggleClick() {

@@ -1,9 +1,13 @@
 $txcm-datepickerPrecision-color: $txgl-gray-100;
+$txcm-datepickerPrecision-borderColor: $txgl-gray-300;
 
 .txcm-datepickerPrecision {
   display: flex;
   align-items: center;
-  margin: 15px 0 0 15px;
+  flex-grow: 1;
+  padding: 20px 0 0q;
+  border-top: 1px solid $txcm-datepickerPrecision-borderColor;
+  margin: 6px 15px 0;
   color: $txcm-datepickerPrecision-color;
 }
 
@@ -12,34 +16,34 @@ $txcm-datepickerPrecision-color: $txgl-gray-100;
   display: flex;
   justify-content: center;
   margin: 0 0 0 10px;
+  list-style: none;
 }
 
-.txcm-datepickerPrecisionInput {
-  position: absolute;
-  left: -10000px;
-
-  &:checked {
-    @extend %txph-datepickerPrecisionInput;
-  }
+.txcm-datepickerPrecisionOption {
+  padding: 0;
+  margin: 0;
 }
 
-$txcm-datepickerPrecisionLabel-width: 30px;
-$txcm-datepickerPrecisionLabel-height: 25px;
-$txcm-datepickerPrecisionLabel-checked-color: $txgl-black;
-$txcm-datepickerPrecisionLabel-checked-background: $txgl-white-900;
+$txcm-datepickerPrecisionButtonn-width: 30px;
+$txcm-datepickerPrecisionButtonn-height: 25px;
+$txcm-datepickerPrecisionButtonn-color: $txgl-white;
+$txcm-datepickerPrecisionButtonn-active-color: $txgl-black;
+$txcm-datepickerPrecisionButtonn-active-background: $txgl-white-900;
 
-.txcm-datepickerPrecisionLabel {
+.txcm-datepickerPrecisionButton {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: $txcm-datepickerPrecisionLabel-width;
-  height: $txcm-datepickerPrecisionLabel-height;
+  width: $txcm-datepickerPrecisionButtonn-width;
+  height: $txcm-datepickerPrecisionButtonn-height;
   border-radius: $txgl-form-borderRadius;
+  color: $txcm-datepickerPrecisionButtonn-color;
+  background: none;
   transition: color $txgl-transition-default, background $txgl-transition-default;
 
-  %txph-datepickerPrecisionInput + & {
-    color: $txcm-datepickerPrecisionLabel-checked-color;
-    background: $txcm-datepickerPrecisionLabel-checked-background;
+  &-is-active {
+    color: $txcm-datepickerPrecisionButtonn-active-color;
+    background: $txcm-datepickerPrecisionButtonn-active-background;
   }
 }

@@ -1,12 +1,18 @@
 <script>
   import DatepickerSwitcher from './DatepickerSwitcher.svelte';
-  import DatepickerQuarters from './DatepickerQuarters.svelte';
-  import DatepickerMonths from './DatepickerMonths.svelte';
+  import DatepickerOptionsQuarters from './DatepickerOptionsQuarters.svelte';
+  import DatepickerOptionsMonths from './DatepickerOptionsMonths.svelte';
 
   export let precision;
+  export let year;
+  export let month;
+  export let quarter;
 
-  const options = [2017, 2018, 2019, 2020, 2021, 2022];
+  export let monthOptions;
+  export let quarterOptions;
+  export let yearOptions;
 
+  let highlitedQuarter;
   let prevPrecision = precision;
 
   function renderStatus() {
@@ -33,7 +39,18 @@
 <div
   class={`txcm-datepickerSection ${renderStatus(precision)}`}>
     <DatepickerSwitcher
-      {options} />
-    <DatepickerQuarters />
-    <DatepickerMonths />
+      bind:pick={year}
+      options={yearOptions} />
+    <DatepickerOptionsQuarters
+      bind:precision
+      bind:month
+      bind:quarter
+      bind:highlitedQuarter
+      {quarterOptions} />
+    <DatepickerOptionsMonths
+      bind:precision
+      bind:month
+      bind:quarter
+      {highlitedQuarter}
+      {monthOptions} />
 </div>
