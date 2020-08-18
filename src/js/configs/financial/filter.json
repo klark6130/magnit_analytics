@@ -124,12 +124,34 @@
     {
       "type": "select",
       "data": {
+        "label": "Подформ.",
         "name": "finSubForm",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Подформ.",
+            "label": "Опция 0",
             "value": 0
+          }, {
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
           }
         ]
       }
@@ -139,12 +161,34 @@
     {
       "type": "select",
       "data": {
+        "label": "Округ",
         "name": "finCounty",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Округ",
+            "label": "Опция 0",
             "value": 0
+          }, {
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
           }
         ]
       }
@@ -152,12 +196,34 @@
     {
       "type": "select",
       "data": {
+        "label": "Подокруг",
         "name": "finSubCounty",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Подокруг",
+            "label": "Опция 0",
             "value": 0
+          }, {
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
           }
         ]
       }
@@ -165,12 +231,34 @@
     {
       "type": "select",
       "data": {
+        "label": "Фил./гр.",
         "name": "finGroup",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Фил./гр.",
+            "label": "Опция 0",
             "value": 0
+          }, {
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
           }
         ]
       }
@@ -178,12 +266,34 @@
     {
       "type": "select",
       "data": {
+        "label": "Подфил./подгр.",
         "name": "finSubGroup",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Подфил./подгр.",
+            "label": "Опция 0",
             "value": 0
+          }, {
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
           }
         ]
       }
@@ -191,12 +301,34 @@
     {
       "type": "select",
       "data": {
+        "label": "ТО",
         "name": "finTO",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "ТО",
+            "label": "Опция 0",
             "value": 0
+          }, {
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
           }
         ]
       }

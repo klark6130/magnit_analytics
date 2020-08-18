@@ -9,6 +9,8 @@ $txcm-selectToggle-hover-color: $txgl-white-900;
 $txcm-selectToggle-hover-background: $txgl-gray-300;
 $txcm-selectToggle-active-color: $txgl-white-900;
 $txcm-selectToggle-active-background: $txgl-gray-200;
+$txcm-selectToggle-has-selected-color: $txgl-black;
+$txcm-selectToggle-has-selected-background: $txgl-white-900;
 
 .txcm-selectToggle {
   height: $txgl-filter-height;
@@ -26,22 +28,90 @@ $txcm-selectToggle-active-background: $txgl-gray-200;
     color: $txcm-selectToggle-active-color;
     background: $txcm-selectToggle-active-background;
   }
+
+  &-has-selected {
+    color: $txcm-selectToggle-has-selected-color;
+    background: $txcm-selectToggle-has-selected-background;
+
+    &:hover,
+    &:active {
+      color: $txcm-selectToggle-has-selected-color;
+      background: $txcm-selectToggle-has-selected-background;
+    }
+  }
 }
+
+$txcm-selectOptions-optionHeight: 32px;
+$txcm-selectOptions-maxWidth: 200px;
+$txcm-selectOptions-count: 5;
+$txcm-selectOptions-maxHeight: $txcm-selectOptions-count * $txcm-selectOptions-optionHeight;
+$txcm-selectOptions-background: $txgl-gray-400;
 
 .txcm-selectOptions {
   position: absolute;
   top: 100%;
-  left: 0;
-  display: none;
-  width: 100%;
+  left: $txgl-filter-margin;
+  visibility: hidden;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-width: 100%;
+  min-width: calc(100% - #{($txgl-filter-margin * 2)});
+  max-width: $txcm-selectOptions-maxWidth;
+  max-height: $txcm-selectOptions-maxHeight;
   padding: 0;
-  margin: 0;
+  border-radius: 3px;
+  margin: 2px 0 0;
+  background: $txcm-selectOptions-background;
   list-style: none;
+  opacity: 0;
+  transition: opacity $txgl-transition-default, opacity $txgl-transition-default step-end;
+
+  &-is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $txgl-transition-default, opacity $txgl-transition-default step-start;
+  }
+}
+
+.txcm-selectOption {
+  margin: 0;
 }
 
 .txcm-selectInput {
   position: absolute;
   left: -10000px;
+
+  &:checked {
+    @extend %txph-selectInput-checked;
+  }
+}
+
+$txcm-selectLabel-highlighted-background: $txgl-gray-300;
+$txcm-selectLabel-active-color: $txgl-white-900;
+$txcm-selectLabel-active-background: $txgl-gray-200;
+$txcm-selectLabel-selected-color: $txgl-black;
+$txcm-selectLabel-selected-background: $txgl-white-900;
+
+.txcm-selectLabel {
+  display: flex;
+  align-items: center;
+  height: $txcm-selectOptions-optionHeight;
+  padding: 0 16px;
+  transition: color $txgl-transition, background $txgl-transition;
+
+  &:active {
+    color: $txcm-selectLabel-active-color;
+    background: $txcm-selectLabel-active-background;
+  }
+
+  %txph-selectInput-checked + & {
+    color: $txcm-selectLabel-selected-color;
+    background: $txcm-selectLabel-selected-background;
+  }
+
+  &-is-highlighted {
+    background: $txcm-selectLabel-highlighted-background;
+  }
 }
 
 $txcm-selectToggleIcon-width: 6px;

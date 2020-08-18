@@ -13,7 +13,7 @@
   const PROPS = {
     stepper: ['cancel', 'options'],
     pick: ['label', 'value'],
-    select: ['options'],
+    select: ['label', 'options'],
   };
 
   function pickElement(type) {

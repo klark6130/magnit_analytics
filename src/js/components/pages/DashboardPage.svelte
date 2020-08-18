@@ -11,7 +11,6 @@
     operational: OperationalDashboard,
   };
 
-  export let location;
   export let dashboard;
   export let indicator;
 
