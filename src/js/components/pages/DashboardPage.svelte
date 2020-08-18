@@ -3,6 +3,7 @@
   import OperationalDashboard from 'components/dashboards/OperationalDashboard.svelte';
   import Header from 'components/header/Header.svelte';
   import Menu from 'components/menu/Menu.svelte';
+  import Tooltip from 'components/tooltip/Tooltip.svelte';
   import AsideMenu from 'components/aside/AsideMenu.svelte';
 
   const DASHBOARDS = {
@@ -27,3 +28,4 @@
 <AsideMenu />
 <svelte:component
   this={pickDashboard(dashboard)} />
+<Tooltip />
