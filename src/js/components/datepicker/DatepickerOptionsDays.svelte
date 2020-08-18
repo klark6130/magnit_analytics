@@ -1,5 +1,5 @@
 <script>
-  import { generateDayOptions } from 'utilities/date';
+  import { generateDayOptions, calculateWeekNumber } from 'utilities/date';
 
   export let precision;
   export let day;
@@ -35,6 +35,7 @@
     precision = 0;
     ({ day, month } = dayOption);
     year = yearOption;
+    week = calculateWeekNumber(day, month, dayOption.year);
   }
 </script>
 

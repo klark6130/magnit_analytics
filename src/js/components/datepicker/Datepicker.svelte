@@ -3,7 +3,6 @@
   import DatepickerToggle from './DatepickerToggle.svelte';
   import DatepickerContainer from './DatepickerContainer.svelte';
 
-  export let name;
   export let note = null;
 
   let isActive = false;

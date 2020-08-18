@@ -7,6 +7,13 @@
   export let cancel;
 
   const id = `${name}-${index}`;
+
+  function onLabelClick(event) {
+    if (cancel && pick === value) {
+      event.preventDefault();
+      pick = null;
+    }
+  }
 </script>
 
 <li
@@ -20,7 +27,8 @@
       {value}>
     <label
       class="txcm-stepperLabel"
-      for={id}>
+      for={id}
+      on:click={onLabelClick}>
         {label}
     </label>
 </li>
