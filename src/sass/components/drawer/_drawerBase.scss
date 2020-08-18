@@ -13,6 +13,7 @@ $txcm-drawer-background: $txgl-gray-500;
   height: 100%;
   padding: 20px 20px 0;
   background: $txcm-drawer-background;
+  pointer-events: all;
   transform: translateX(-100%);
   transition: transform $txgl-transition-slow;
 

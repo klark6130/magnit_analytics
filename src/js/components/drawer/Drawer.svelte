@@ -26,7 +26,8 @@
   on:overlayclose={onOverayClose}>
     <div
       class="txcm-drawer"
-      class:txcm-drawer-is-active={isActive}>
+      class:txcm-drawer-is-active={isActive}
+      on:click|stopPropagation>
         <slot />
         <button
           class="txcm-drawerClose"

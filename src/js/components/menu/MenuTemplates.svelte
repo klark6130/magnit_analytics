@@ -1,10 +1,12 @@
 <script>
   import NavLink from 'components/core/navLink/NavLink.svelte';
+  import { i18n } from 'utilities/internationalization';
 </script>
 
 <nav
   class="txcm-menuDrawerTemplates">
     <div
+      use:i18n
       class="txcm-menuDrawerTemplatesHeader">
         Шаблоны
     </div>

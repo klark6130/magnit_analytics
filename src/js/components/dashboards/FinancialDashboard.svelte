@@ -2,10 +2,8 @@
   import IndicatorsMenu from 'components/indicators/IndicatorsMenu.svelte';
   import IndicatorsToggle from 'components/indicators/IndicatorsToggle.svelte';
   import Filter from 'components/filter/Filter.svelte';
-  import { default as filterConfig } from 'configs/filterFinancial.json';
-  import { default as indicatorsConfig } from 'configs/indicatorsFinancial.json';
-
-  export let settings;
+  import { default as filterConfig } from 'configs/financial/filter.json';
+  import { default as indicatorsConfig } from 'configs/financial/indicators.json';
 </script>
 
 <Filter

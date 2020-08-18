@@ -1,7 +1,7 @@
 <script>
-  import NavLink from 'components/core/navLink/NavLink.svelte';
   import Overlay from 'components/core/overlay/Overlay.svelte';
   import { getUIState } from 'state/ui';
+  import MenuLanguage from './MenuLanguage.svelte';
   import MenuNavigation from './MenuNavigation.svelte';
   import MenuTemplates from './MenuTemplates.svelte';
   import MenuUser from './MenuUser.svelte';
@@ -29,17 +29,14 @@
   on:overlayclose={onOverayClose}>
     <div
       class="txcm-menuDrawer"
-      class:txcm-menuDrawer-is-active={isActive}>
+      class:txcm-menuDrawer-is-active={isActive}
+      on:click|stopPropagation>
         <svg
           class="txcm-menuLogo">
             <use
               xlink:href="#txspt-icons-logo" />
         </svg>
-        <NavLink
-          linkClass="txcm-menuDrawerLanguage"
-          to="/">
-            en
-        </NavLink>
+        <MenuLanguage />
         <MenuNavigation />
         <MenuTemplates />
         <MenuUser />

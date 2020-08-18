@@ -1,5 +1,5 @@
 <script>
-  import { default as config } from 'configs/navigationOperational.json';
+  import { default as config } from 'configs/operational/navigation.json';
   import ListGroup from 'components/list/ListGroup.svelte';
   import NavLink from 'components/core/navLink/NavLink.svelte';
 </script>

@@ -1,8 +1,14 @@
 <script>
-  import { toggleUI } from 'state/ui';
+  import { getUIState, updateUI } from 'state/ui';
+
+  const indicators = getUIState('indicators');
+
+  function show() {
+    updateUI({ indicators: true });
+  }
 
   function onToggleClick() {
-    toggleUI('indicators');
+    if (!$indicators) setTimeout(show, 5);
   }
 </script>
 

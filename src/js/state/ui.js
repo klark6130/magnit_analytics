@@ -5,6 +5,7 @@ const UI_INITIAL_STATE = {
   menuDashNav: false,
   aside: false,
   indicators: false,
+  locale: 'ru',
 };
 
 let uiState;

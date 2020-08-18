@@ -1,9 +1,15 @@
 <script>
-  import { toggleUI, updateUI } from 'state/ui';
+  import { getUIState, updateUI } from 'state/ui';
+
+  const menu = getUIState('menu');
+
+  function show() {
+    updateUI({ menu: true });
+    updateUI({ menuDashNav: false });
+  }
 
   function onToggleClick() {
-    toggleUI('menu');
-    updateUI({ menuDashNav: false });
+    if (!$menu) setTimeout(show, 5);
   }
 </script>
 

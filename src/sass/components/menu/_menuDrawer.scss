@@ -14,6 +14,7 @@ $txcm-menuDrawer-background: $txgl-gray-500;
   height: 100%;
   padding: 20px 20px 0;
   background: $txcm-menuDrawer-background;
+  pointer-events: all;
   transform: translateX(100%);
   transition: transform $txgl-transition-slow;
 
@@ -35,16 +36,20 @@ $txcm-menuLogo-color: $txgl-white-900;
   fill: $txcm-menuLogo-color;
 }
 
+$txcm-menuDrawerLanguage-color: $txgl-white;
 $txcm-menuDrawerLanguage-size: 32px;
 $txcm-menuDrawerLanguage-fontSize: 14px;
 
-.txcm-menuDrawerLanguage {
+.txcm-menuDrawerLocale {
   @include txmx-fontSize($txcm-menuDrawerLanguage-fontSize);
   display: flex;
   align-items: center;
   justify-content: center;
   width: $txcm-menuDrawerLanguage-size;
   height: $txcm-menuDrawerLanguage-size;
+  padding: 0;
   margin: 0 0 0 40px;
+  color: $txcm-menuDrawerLanguage-color;
+  background: none;
   text-decoration: none;
 }

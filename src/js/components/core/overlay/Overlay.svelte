@@ -6,31 +6,37 @@
 
   const dispatch = createEventDispatcher();
 
-  $: switchKeys(isActive);
+  $: updateEvents(isActive);
 
   function isCloseKey(keyCode) {
     return keyCode === 27;
-  }
-
-  function subscribeKeys() {
-    window.addEventListener('keyup', onKeyUp);
-  }
-
-  function unsubscribeKeys() {
-    window.removeEventListener('keyup', onKeyUp);
-  }
-
-  function switchKeys() {
-    if (isActive) subscribeKeys();
-    else unsubscribeKeys();
   }
 
   function hide() {
     if (isActive) dispatch('overlayclose');
   }
 
+  function onWindowClick() {
+    hide();
+  }
+
   function onKeyUp({ keyCode }) {
     if (isCloseKey(keyCode) && isActive) hide();
+  }
+
+  function subscribeWindow() {
+    window.addEventListener('click', onWindowClick);
+    window.addEventListener('keyup', onKeyUp);
+  }
+
+  function unsubscribeWindow() {
+    window.removeEventListener('click', onWindowClick);
+    window.removeEventListener('keyup', onKeyUp);
+  }
+
+  function updateEvents() {
+    if (isActive) subscribeWindow();
+    else unsubscribeWindow();
   }
 </script>
 

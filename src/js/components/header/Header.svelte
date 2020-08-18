@@ -4,13 +4,21 @@
   import HeaderFilter from './HeaderFilter.svelte';
   import HeaderNavigation from './HeaderNavigation.svelte';
 
-  export let section;
+  export let dashboard;
+  export let indicator;
+
+  $: isTabsActive = indicator;
 </script>
 
 <header
   class="txcm-header">
     <HeaderDashboardToggle />
-    <HeaderTabs />
-    <HeaderFilter />
+    {#if isTabsActive}
+      <HeaderTabs
+        {dashboard}
+        {indicator} />
+    {/if}
+    <HeaderFilter
+      {dashboard} />
     <HeaderNavigation />
 </header>

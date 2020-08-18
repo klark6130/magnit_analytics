@@ -6,6 +6,7 @@
   import DashboardPage from './pages/DashboardPage.svelte';
   import DefaultPage from './pages/DefaultPage.svelte';
   import ErrorPage from './pages/ErrorPage.svelte';
+  import ExportPage from './pages/ExportPage.svelte';
   import LoadingPage from './pages/LoadingPage.svelte';
   import LogoutPage from './pages/LogoutPage.svelte';
 
@@ -24,8 +25,11 @@
     <LoadingPage />
   {:then}
       <Route
-        path="/dashboard/:section/*settings"
+        path="/dashboard/:dashboard/*indicator"
         component={DashboardPage} />
+      <Route
+        path="/export"
+        component={ExportPage} />
       <Route
         path="/login"
         component={AuthPage} />

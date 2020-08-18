@@ -24,19 +24,17 @@
   let year = yearOptions.indexOf(yearValue);
   let week = calculateWeekNumber(day, month, year);
   let quarter = Math.floor(month / 3);
-
-  $: label = updateLabel(day, month, year);
-
-  function updateLabel() {
-    return `${day} ${monthOptions[month]} ${yearOptions[year]}`;
-  }
 </script>
 
 <div
   class="txcm-datepickerHolder">
     <DatepickerToggle
       bind:isActive
-      {label}
+      {day}
+      {month}
+      {year}
+      {monthOptions}
+      {yearOptions}
       {note} />
     <DatepickerContainer
       {isActive}

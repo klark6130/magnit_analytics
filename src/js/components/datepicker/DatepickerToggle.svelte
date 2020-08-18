@@ -1,5 +1,11 @@
 <script>
-  export let label;
+  import Int from 'components/core/internationalization/Int.svelte';
+
+  export let day;
+  export let month;
+  export let year;
+  export let monthOptions;
+  export let yearOptions;
   export let note = null;
   export let isActive;
 
@@ -40,9 +46,9 @@
     else unsubscribeWindow();
   }
 
-  function renderToggleLabel() {
-    if (note) return `${label} (${note})`;
-    return label;
+  function renderToggleNote() {
+    if (note) return ` (${note})`;
+    return '';
   }
 
   function onToggleClick() {
@@ -54,7 +60,11 @@
   class="txcm-datepickerToggle"
   class:txcm-datepickerToggle-is-active={isActive}
   on:click={onToggleClick}>
-    {renderToggleLabel()}
+    {day}
+    <Int
+      key={monthOptions[month]} />
+    {yearOptions[year]}
+    {renderToggleNote()}
     <svg
       class="txcm-datepickerToggleIcon">
         <use
