@@ -1,8 +1,9 @@
 <script>
-  import NavLink from 'components/core/navLink/NavLink.svelte';
-  import ListFilter from 'components/list/ListFilter.svelte'
-  import AsideGroupFinancial from './AsideGroupFinancial.svelte'
-  import AsideGroupOperational from './AsideGroupOperational.svelte'
+  import ListFilter from 'components/list/ListFilter.svelte';
+  import AsideNavigationFinancial from './AsideNavigationFinancial.svelte';
+  import AsideNavigationOperational from './AsideNavigationOperational.svelte';
+
+  let filter = '';
 </script>
 
 <nav
@@ -11,7 +12,10 @@
       class="txcm-asideNavigationHeader">
         Выбор показателя
     </div>
-    <ListFilter />
-    <AsideGroupFinancial />
-    <AsideGroupOperational />
+    <ListFilter
+      bind:value={filter} />
+    <AsideNavigationFinancial
+      {filter} />
+    <AsideNavigationOperational
+      {filter} />
 </nav>

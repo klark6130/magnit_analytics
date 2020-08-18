@@ -6,6 +6,7 @@ const UI_INITIAL_STATE = {
   aside: false,
   indicators: false,
   locale: 'ru',
+  tooltip: null,
 };
 
 let uiState;
