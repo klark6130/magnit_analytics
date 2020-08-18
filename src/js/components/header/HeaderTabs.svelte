@@ -11,12 +11,12 @@
   class="txcm-headerTabs">
     <NavLink
       linkClass="txcm-headerTab"
-      to={`${dashboard}/${indicator}/sections`}>
+      to={`/dashboard/${dashboard}/${indicator}`}>
         Срезы
     </NavLink>
     <NavLink
       linkClass="txcm-headerTab"
-      to={`${dashboard}/${indicator}/factors`}>
+      to={`/dashboard/${dashboard}/${indicator}/factors`}>
         Факторы
     </NavLink>
 </nav>

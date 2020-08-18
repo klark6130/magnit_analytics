@@ -1,6 +1,6 @@
 <script>
   import { getUIState } from 'state/ui';
-  import { translate } from 'utilities/internationalization';
+  import { translate } from 'utilities/dictionary';
 
   export let key;
 

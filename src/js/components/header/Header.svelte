@@ -12,7 +12,8 @@
 
 <header
   class="txcm-header">
-    <HeaderDashboardToggle />
+    <HeaderDashboardToggle
+      {dashboard} />
     {#if isTabsActive}
       <HeaderTabs
         {dashboard}

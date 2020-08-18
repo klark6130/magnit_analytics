@@ -4,31 +4,31 @@
     "links": [
       {
         "label": "Выручка",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       },
       {
         "label": "Валовый доход",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       },
       {
         "label": "OPEX",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       },
       {
         "label": "EBITDA",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       },
       {
         "label": "EBITDAR",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       },
       {
         "label": "Чистая прибыль",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       },
       {
         "label": "Рабочий капитал",
-        "href": "/"
+        "href": "/dashboard/operational/indicator"
       }
     ]
   }

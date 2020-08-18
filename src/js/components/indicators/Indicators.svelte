@@ -6,6 +6,8 @@
 
   export let config;
 
+  let filter = '';
+
   initIndicators(config);
 </script>
 
@@ -13,8 +15,10 @@
   class="txcm-indicatorsHeader">
     Добавить показатели
 </div>
-<ListFilter />
+<ListFilter
+  bind:value={filter} />
 <IndicatorsActiveList
   {config} />
 <IndicatorsList
-  {config} />
+  {config}
+  {filter} />

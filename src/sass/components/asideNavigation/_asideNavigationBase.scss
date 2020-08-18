@@ -15,31 +15,6 @@ $txcm-asideNavigationHeader-height: 32px;
   font-weight: bold;
 }
 
-$txph-dashboardNavMark-width: 9px;
-$txph-dashboardNavMark-height: 6px;
-$txph-dashboardNavMark-color: $txgl-red;
-
-%txph-dashboardNavMark {
-  &::before {
-    @include txmx-pseudo;
-    top: 50%;
-    right: 0;
-    width: $txph-dashboardNavMark-width;
-    height: $txph-dashboardNavMark-height;
-    margin: ($txph-dashboardNavMark-height / -2) 0 0 0;
-    color: $txph-dashboardNavMark-color;
-    background: currentColor;
-    opacity: 0;
-    transition: opacity $txgl-transition-default;
-  }
-
-  &-is-active {
-    &::before {
-      opacity: 1;
-    }
-  }
-}
-
 .txcm-asideNavGroup {
   margin: 0 0 12px;
 }
@@ -48,7 +23,6 @@ $txcm-asideNavLink-height: 32px;
 $txcm-asideNavLink-active-color: $txgl-white-900;
 
 .txcm-asideNavLink {
-  @extend %txph-dashboardNavMark;
   position: relative;
   display: flex;
   align-items: center;
@@ -56,7 +30,28 @@ $txcm-asideNavLink-active-color: $txgl-white-900;
   text-decoration: none;
 
   &-is-active {
-    @extend %txph-dashboardNavMark-is-active;
+    @extend %txph-asideNavLink-is-active;
     @include txmx-link($txcm-asideNavLink-active-color);
+  }
+}
+
+$txcm-asideNavLinkIcon-width: 9px;
+$txcm-asideNavLinkIcon-height: 6px;
+$txcm-asideNavLinkIcon-color: $txgl-red;
+
+.txcm-asideNavLinkIcon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: $txcm-asideNavLinkIcon-width;
+  height: $txcm-asideNavLinkIcon-height;
+  margin: ($txcm-asideNavLinkIcon-height / -2) 0 0;
+  color: $txcm-asideNavLinkIcon-color;
+  opacity: 0;
+  transition: opacity $txgl-transition-default;
+  fill: currentColor;
+
+  %txph-asideNavLink-is-active > & {
+    opacity: 1;
   }
 }

@@ -1,7 +1,17 @@
 <script>
+  import Int from 'components/core/internationalization/Int.svelte';
   import { getUIState, updateUI } from 'state/ui';
 
+  export let dashboard;
+
   const aside = getUIState('aside');
+
+  $: label = renderLabel(dashboard);
+
+  function renderLabel() {
+    if (dashboard === 'financial') return 'Финансовый дашборд';
+    return 'Операционный дашборд';
+  }
 
   function show() {
     updateUI({ aside: true });
@@ -20,5 +30,6 @@
         <use
           xlink:href="#txspt-icons-fatArrow" />
     </svg>
-    Финансовый дашборд
+    <Int
+      key={label} />
 </button>

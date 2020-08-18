@@ -4,7 +4,6 @@ $txcm-asideNavGroupLink-hover-color: $txgl-white;
 $txcm-asideNavGroupLink-active-color: $txgl-white-900;
 
 .txcm-asideNavGroupLink {
-  @extend %txph-dashboardNavMark;
   @include txmx-link($txcm-asideNavGroupLink-color, $txcm-asideNavGroupLink-color, $txcm-asideNavGroupLink-hover-color, $txcm-asideNavGroupLink-active-color);
   position: relative;
   display: flex;
@@ -13,7 +12,28 @@ $txcm-asideNavGroupLink-active-color: $txgl-white-900;
   text-decoration: none;
 
   &-is-active {
-    @extend %txph-dashboardNavMark-is-active;
+    @extend %txph-asideNavGroupLink-is-active;
     @include txmx-link($txcm-asideNavGroupLink-active-color);
+  }
+}
+
+$txcm-asideNavGroupLinkIcon-width: 9px;
+$txcm-asideNavGroupLinkIcon-height: 6px;
+$txcm-asideNavGroupLinkIcon-color: $txgl-red;
+
+.txcm-asideNavGroupLinkIcon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: $txcm-asideNavGroupLinkIcon-width;
+  height: $txcm-asideNavGroupLinkIcon-height;
+  margin: ($txcm-asideNavGroupLinkIcon-height / -2) 0 0;
+  color: $txcm-asideNavGroupLinkIcon-color;
+  opacity: 0;
+  transition: opacity $txgl-transition-default;
+  fill: currentColor;
+
+  %txph-asideNavGroupLink-is-active > & {
+    opacity: 1;
   }
 }

@@ -10,7 +10,7 @@
   class="txcm-asideNavGroup">
     <NavLink
       linkClass="txcm-asideNavLink"
-      to="/">
+      to="/dashboard/operational">
         Операционный дашборд
     </NavLink>
     <AsideGroup

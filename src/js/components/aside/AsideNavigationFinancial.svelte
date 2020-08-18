@@ -10,8 +10,13 @@
   class="txcm-asideNavGroup">
     <NavLink
       linkClass="txcm-asideNavLink"
-      to="/">
+      to="/dashboard/financial">
         Финансовый дашборд
+        <svg
+          class="txcm-asideNavLinkIcon">
+            <use
+              xlink:href="#txspt-icons-checkmark" />
+        </svg>
     </NavLink>
     <AsideGroup
       categories={config}
