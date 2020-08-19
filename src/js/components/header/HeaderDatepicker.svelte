@@ -1,5 +1,8 @@
 <script>
   import Datepicker from 'components/datepicker/Datepicker.svelte';
+
+  let date;
 </script>
 
-<Datepicker />
+<Datepicker
+  bind:value={date} />

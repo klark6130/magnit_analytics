@@ -123,6 +123,7 @@
     <button
       class="txcm-selectToggle"
       class:txcm-selectToggle-has-selected={hasSelected(pick)}
+      class:txcm-selectToggle-is-opened={isActive}
       on:click={onToggleClick}>
         {renderToggleLabel(pick)}
         <svg
@@ -133,7 +134,7 @@
     </button>
     <ul
       class="txcm-selectOptions"
-      class:txcm-selectOptions-is-active={isActive}
+      class:txcm-selectOptions-is-opened={isActive}
       bind:this={node}>
         {#each options as option, index}
           <SelectOption

@@ -1,12 +1,12 @@
 <script>
   import Drawer from 'components/drawer/Drawer.svelte';
-  import Indicators from './Indicators.svelte';
+  import IndicatorsDrawer from './IndicatorsDrawer.svelte';
 
   export let config;
 </script>
 
 <Drawer
   store="indicators">
-    <Indicators
+    <IndicatorsDrawer
       {config} />
 </Drawer>

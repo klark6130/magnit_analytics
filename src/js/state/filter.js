@@ -1,4 +1,4 @@
-import { initState, updateData, toggleData, getStateData, getState, subscribe } from '../utilities/state';
+import { initState, updateData, toggleData, getStateData, getState, subscribe, subscribeAll } from '../utilities/state';
 
 let filterState;
 
@@ -29,6 +29,10 @@ export function toggleFilter(keys) {
 
 export function subscribeFilter(key, task) {
   return subscribe(filterState, key, task);
+}
+
+export function subscribeFilterAll(task) {
+  return subscribeAll(filterState, task);
 }
 
 export function getFilterData(keys) {

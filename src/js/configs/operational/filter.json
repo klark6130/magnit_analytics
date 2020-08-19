@@ -75,12 +75,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Подформ.",
         "name": "opSubForm",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Подформ.",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -90,12 +121,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Округ",
         "name": "opCounty",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Округ",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -103,12 +165,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Подокруг",
         "name": "opSubCounty",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Подокруг",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -116,12 +209,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Фил./гр.",
         "name": "opGroup",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Фил./гр.",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -129,12 +253,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Подфил./подгр.",
         "name": "opSubGroup",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Подфил./подгр.",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -142,12 +297,43 @@
     {
       "type": "select",
       "data": {
+        "label": "ТО",
         "name": "opTO",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "ТО",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -157,12 +343,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Тов. кат.",
         "name": "opCat",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Тов. кат.",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -170,12 +387,43 @@
     {
       "type": "select",
       "data": {
+        "label": "Гр. 20/23",
         "name": "opGroupNumber",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "Гр. 20/23",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -185,12 +433,43 @@
     {
       "type": "select",
       "data": {
+        "label": "ТУ",
         "name": "opTU",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "ТУ",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
@@ -198,12 +477,43 @@
     {
       "type": "select",
       "data": {
+        "label": "СВ",
         "name": "opSV",
-        "pick": 0,
+        "pick": null,
         "options": [
           {
-            "label": "СВ",
-            "value": 0
+            "label": "Опция 1",
+            "value": 1
+          }, {
+            "label": "Опция 2",
+            "value": 2
+          }, {
+            "label": "Опция 3",
+            "value": 3
+          }, {
+            "label": "Опция 4",
+            "value": 4
+          }, {
+            "label": "Опция 5",
+            "value": 5
+          }, {
+            "label": "Опция 6",
+            "value": 6
+          }, {
+            "label": "Опция 7",
+            "value": 7
+          }, {
+            "label": "Опция 8",
+            "value": 8
+          }, {
+            "label": "Опция 9",
+            "value": 9
+          }, {
+            "label": "Опция 10",
+            "value": 10
+          }, {
+            "label": "Опция 11",
+            "value": 11
           }
         ]
       }
