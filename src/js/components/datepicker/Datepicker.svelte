@@ -4,7 +4,6 @@
   import DatepickerContainer from './DatepickerContainer.svelte';
 
   export let value;
-  export let start = null;
   export let note = null;
 
   const precisionOptions = ['D', 'W', 'M', 'Q', 'Y'];
@@ -12,7 +11,7 @@
   const quarterOptions = ['Q1', 'Q2', 'Q3', 'Q4'];
   const yearOptions = [2017, 2018, 2019, 2020, 2021, 2022];
 
-  const now = start ? new Date(start) : new Date();
+  const now = value ? new Date(value) : new Date();
   const dayValue = now.getDate();
   const monthValue = now.getMonth();
   const yearValue = now.getFullYear();

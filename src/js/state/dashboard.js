@@ -6,12 +6,19 @@ const DASHBOARD_INITIAL_STATE = {
 
 let dashboardState;
 
-function generateInititalState() {
+function generateDates() {
   const date = new Date();
-  const dateYoY = date - 86400000;
+  const timestamp = date.getTime();
+  const timestampYoY = date.setFullYear(date.getFullYear() - 1);
   return {
-    date,
-    dateYoY,
+    date: timestamp,
+    dateYoY: timestampYoY,
+  };
+}
+
+function generateInititalState() {
+  return {
+    ...generateDates(),
     ...DASHBOARD_INITIAL_STATE,
   };
 }

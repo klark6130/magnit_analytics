@@ -1,8 +1,13 @@
 <script>
   import Datepicker from 'components/datepicker/Datepicker.svelte';
+  import { getDashboardState } from 'state/dashboard';
 
-  let date;
+  const date = getDashboardState('date');
+
+  let value = $date;
+
+  $: $date = value;
 </script>
 
 <Datepicker
-  bind:value={date} />
+  bind:value />

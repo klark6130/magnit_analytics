@@ -5,6 +5,7 @@
   import Menu from 'components/menu/Menu.svelte';
   import Tooltip from 'components/tooltip/Tooltip.svelte';
   import AsideMenu from 'components/aside/AsideMenu.svelte';
+  import { initDashboard } from 'state/dashboard';
 
   const DASHBOARDS = {
     financial: DashboardFinancial,
@@ -18,6 +19,8 @@
     if (DASHBOARDS[key]) return DASHBOARDS[key];
     return DASHBOARDS.financial;
   }
+
+  initDashboard();
 </script>
 
 <Header
