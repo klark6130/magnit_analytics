@@ -4,61 +4,50 @@
     "indicators": [
       {
         "name": "finPTO",
-        "label": "РTO",
+        "href": "/dashboard/financial/indicator",
+        "label": "Выручка",
         "note": "РTO LFL",
         "value": "pto",
-        "status": false
-      },
-      {
+        "status": true
+      }, {
         "name": "finAvgCheck",
-        "label": "Ср. чек",
+        "href": "/dashboard/financial/indicator",
+        "label": "Валовый доход",
         "note": "Ср. чек LFL",
         "value": "avgCheck",
-        "status": false
-      },
-      {
+        "status": true
+      }, {
         "name": "finTraffic",
-        "label": "Трафик",
+        "href": "/dashboard/financial/indicator",
+        "label": "OPEX",
         "note": "Трафик LFL",
         "value": "traffic",
         "status": false
-      },
-      {
+      }, {
         "name": "finLocations",
-        "label": "Кол-во объектов",
+        "href": "/dashboard/financial/indicator",
+        "label": "EBITDA",
         "note": "Торг. площадь",
         "value": "locations",
         "status": false
-      },
-      {
+      }, {
         "name": "finMargin",
-        "label": "Front Margin",
+        "href": "/dashboard/financial/indicator",
+        "label": "EBITDAR",
         "value": "frontMargin",
         "status": false
-      },
-      {
+      }, {
         "name": "finLosses",
-        "label": "Потери",
+        "href": "/dashboard/financial/indicator",
+        "label": "Чистая прибыль",
         "value": "losses",
         "status": false
-      },
-      {
+      }, {
         "name": "finStock",
-        "label": "Тов. запас",
+        "href": "/dashboard/financial/indicator",
+        "label": "Рабочий капитал",
         "note": "Обора-сть",
         "value": "stock",
-        "status": false
-      },
-      {
-        "label": "Доля промо",
-        "name": "finPromo",
-        "value": "promo",
-        "status": false
-      },
-      {
-        "name": "finUSRC",
-        "label": "УС РЦ",
-        "value": "usrc",
         "status": false
       }
     ]
@@ -66,62 +55,23 @@
     "label": "Продажи",
     "indicators": [
       {
-        "name": "finPTOPlus",
-        "label": "РTO",
-        "note": "РTO LFL",
-        "value": "pto",
-        "status": false
-      },
-      {
-        "name": "finAvgCheckPlus",
-        "label": "Ср. чек",
-        "note": "Ср. чек LFL",
-        "value": "avgCheck",
-        "status": false
-      },
-      {
-        "name": "finTrafficPlus",
-        "label": "Трафик",
-        "note": "Трафик LFL",
-        "value": "traffic",
-        "status": false
-      },
-      {
-        "name": "finLocationsPlus",
-        "label": "Кол-во объектов",
-        "note": "Торг. площадь",
-        "value": "locations",
-        "status": false
-      },
-      {
-        "name": "finMarginPlus",
-        "label": "Front Margin",
+        "name": "finMargin",
+        "href": "/dashboard/financial/indicator",
+        "label": "EBITDAR",
         "value": "frontMargin",
         "status": false
-      },
-      {
-        "name": "finLossesPlus",
-        "label": "Потери",
+      }, {
+        "name": "finLosses",
+        "href": "/dashboard/financial/indicator",
+        "label": "Чистая прибыль",
         "value": "losses",
         "status": false
-      },
-      {
-        "name": "finStockPlus",
-        "label": "Тов. запас",
+      }, {
+        "name": "finStock",
+        "href": "/dashboard/financial/indicator",
+        "label": "Рабочий капитал",
         "note": "Обора-сть",
         "value": "stock",
-        "status": false
-      },
-      {
-        "name": "finPromoPlus",
-        "label": "Доля промо",
-        "value": "promo",
-        "status": false
-      },
-      {
-        "name": "finUSRCPlus",
-        "label": "УС РЦ",
-        "value": "usrc",
         "status": false
       }
     ]

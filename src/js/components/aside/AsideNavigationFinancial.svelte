@@ -1,5 +1,5 @@
 <script>
-  import { default as config } from 'configs/financial/navigation.json';
+  import { default as config } from 'configs/financial/indicators.json';
   import NavLink from 'components/core/navLink/NavLink.svelte';
   import AsideGroup from './AsideGroup.svelte';
 

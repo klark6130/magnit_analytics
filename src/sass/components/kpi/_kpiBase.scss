@@ -1,0 +1,74 @@
+$txcm-kpiRow-height: 110px;
+$txcm-kpiRow-borderColor: $txgl-gray-400;
+
+.txcm-kpiRow {
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  height: $txcm-kpiRow-height;
+  padding: 24px 0;
+  border-bottom: 1px solid $txcm-kpiRow-borderColor;
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+$txcm-kpiLabel-width: 210px;
+$txcm-kpiLabel-color: $txgl-white-900;
+
+.txcm-kpiLabel {
+  @include txmx-fontSize(22px);
+  box-sizing: border-box;
+  width: $txcm-kpiLabel-width;
+  padding: 0 ($txcm-kpiLabel-width * 0.4) 0 $txgl-gap;
+  color: $txcm-kpiLabel-color;
+  font-weight: bold;
+}
+
+$txcm-kpiCell-width: 307px;
+
+.txcm-kpiCell {
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: $txcm-kpiCell-width;
+
+  &::before {
+    @include txmx-pseudo(relative);
+    order: -1;
+    height: 100%;
+    margin: 0 0 0 14px;
+  }
+}
+
+$txcm-kpiCellValue-color: $txgl-white-900;
+
+.txcm-kpiCellValue {
+  @include txmx-fontSize(22px);
+  order: -3;
+  color: $txcm-kpiCellValue-color;
+  font-weight: bold;
+}
+
+$txcm-kpiCellSubValue-color: $txgl-white-900;
+
+.txcm-kpiCellSubValue {
+  order: -2;
+  margin: 0.5em 0 0;
+  color: $txcm-kpiCellSubValue-color;
+  font-weight: bold;
+  line-height: 1.75;
+}
+
+$txcm-kpiCellAddValue-minWidth: 52px;
+
+.txcm-kpiCellAddValue {
+  min-width: $txcm-kpiCellAddValue-minWidth;
+  margin: 0.75em 0 0 4px;
+  text-align: right;
+  line-height: 1.75;
+}

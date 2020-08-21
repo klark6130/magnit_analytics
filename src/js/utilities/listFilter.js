@@ -40,7 +40,7 @@ function filterNavigationItem(item, filter) {
 }
 
 function filterNavigationCategory(categories, category, filter) {
-  return filterCategory(categories, category, filter, 'links', filterNavigationItem);
+  return filterCategory(categories, category, filter, 'indicators', filterNavigationItem);
 }
 
 export function filterNavigationCategories(categories, filter) {

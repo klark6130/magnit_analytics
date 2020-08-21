@@ -33,4 +33,5 @@
   config={filterConfig} />
 <Indicators
   config={indicatorsConfig} />
-<Overview />
+<Overview
+  config={indicatorsConfig} />

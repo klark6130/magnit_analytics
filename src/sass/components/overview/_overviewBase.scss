@@ -1,3 +1,7 @@
+$txcm-overviewSection-background: $txgl-gray;
+
 .txcm-overviewSection {
-  padding: 138px 0 0;
+  padding: 0 $txgl-gap 0 0;
+  margin: 225px $txgl-gap 0 0;
+  background: $txcm-overviewSection-background;
 }

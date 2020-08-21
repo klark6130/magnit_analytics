@@ -3,62 +3,51 @@
     "label": "Финансовые показатели",
     "indicators": [
       {
-        "name": "opPTO",
-        "label": "РTO",
+        "name": "operPTO",
+        "href": "/dashboard/operational/indicator",
+        "label": "Выручка",
         "note": "РTO LFL",
         "value": "pto",
-        "status": false
-      },
-      {
-        "name": "opAvgCheck",
-        "label": "Ср. чек",
+        "status": true
+      }, {
+        "name": "operAvgCheck",
+        "href": "/dashboard/operational/indicator",
+        "label": "Валовый доход",
         "note": "Ср. чек LFL",
         "value": "avgCheck",
-        "status": false
-      },
-      {
-        "name": "opTraffic",
-        "label": "Трафик",
+        "status": true
+      }, {
+        "name": "operTraffic",
+        "href": "/dashboard/operational/indicator",
+        "label": "OPEX",
         "note": "Трафик LFL",
         "value": "traffic",
         "status": false
-      },
-      {
-        "name": "opLocations",
-        "label": "Кол-во объектов",
+      }, {
+        "name": "operLocations",
+        "href": "/dashboard/operational/indicator",
+        "label": "EBITDA",
         "note": "Торг. площадь",
         "value": "locations",
         "status": false
-      },
-      {
-        "name": "opMargin",
-        "label": "Front Margin",
+      }, {
+        "name": "operMargin",
+        "href": "/dashboard/operational/indicator",
+        "label": "EBITDAR",
         "value": "frontMargin",
         "status": false
-      },
-      {
-        "name": "opLosses",
-        "label": "Потери",
+      }, {
+        "name": "operLosses",
+        "href": "/dashboard/operational/indicator",
+        "label": "Чистая прибыль",
         "value": "losses",
         "status": false
-      },
-      {
-        "name": "opStock",
-        "label": "Тов. запас",
+      }, {
+        "name": "operStock",
+        "href": "/dashboard/operational/indicator",
+        "label": "Рабочий капитал",
         "note": "Обора-сть",
         "value": "stock",
-        "status": false
-      },
-      {
-        "label": "Доля промо",
-        "name": "opPromo",
-        "value": "promo",
-        "status": false
-      },
-      {
-        "name": "opUSRC",
-        "label": "УС РЦ",
-        "value": "usrc",
         "status": false
       }
     ]
@@ -66,62 +55,23 @@
     "label": "Продажи",
     "indicators": [
       {
-        "name": "opPTOPlus",
-        "label": "РTO",
-        "note": "РTO LFL",
-        "value": "pto",
-        "status": false
-      },
-      {
-        "name": "opAvgCheckPlus",
-        "label": "Ср. чек",
-        "note": "Ср. чек LFL",
-        "value": "avgCheck",
-        "status": false
-      },
-      {
-        "name": "opTrafficPlus",
-        "label": "Трафик",
-        "note": "Трафик LFL",
-        "value": "traffic",
-        "status": false
-      },
-      {
-        "name": "opLocationsPlus",
-        "label": "Кол-во объектов",
-        "note": "Торг. площадь",
-        "value": "locations",
-        "status": false
-      },
-      {
-        "name": "opMarginPlus",
-        "label": "Front Margin",
+        "name": "operMargin",
+        "href": "/dashboard/operational/indicator",
+        "label": "EBITDAR",
         "value": "frontMargin",
         "status": false
-      },
-      {
-        "name": "opLossesPlus",
-        "label": "Потери",
+      }, {
+        "name": "operLosses",
+        "href": "/dashboard/operational/indicator",
+        "label": "Чистая прибыль",
         "value": "losses",
         "status": false
-      },
-      {
-        "name": "opStockPlus",
-        "label": "Тов. запас",
+      }, {
+        "name": "operStock",
+        "href": "/dashboard/operational/indicator",
+        "label": "Рабочий капитал",
         "note": "Обора-сть",
         "value": "stock",
-        "status": false
-      },
-      {
-        "name": "opPromoPlus",
-        "label": "Доля промо",
-        "value": "promo",
-        "status": false
-      },
-      {
-        "name": "opUSRCPlus",
-        "label": "УС РЦ",
-        "value": "usrc",
         "status": false
       }
     ]

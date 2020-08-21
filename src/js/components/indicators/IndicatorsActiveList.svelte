@@ -23,6 +23,10 @@
 <div class="txcm-indicatorsActive">
   {#each active as indicator (`${indicator.name}Active`)}
     <IndicatorsControl
-      {...indicator} />
+      name={indicator.name}
+      label={indicator.label}
+      note={indicator.note}
+      status={indicator.status}
+      value={indicator.value} />
   {/each}
 </div>
