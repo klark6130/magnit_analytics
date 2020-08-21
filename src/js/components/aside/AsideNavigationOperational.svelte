@@ -12,6 +12,11 @@
       linkClass="txcm-asideNavLink"
       to="/dashboard/operational">
         Операционный дашборд
+        <svg
+          class="txcm-asideNavLinkIcon">
+            <use
+              xlink:href="#txspt-icons-checkmark" />
+        </svg>
     </NavLink>
     <AsideGroup
       categories={config}

@@ -11,6 +11,9 @@ $txcm-selectToggle-active-color: $txgl-white-900;
 $txcm-selectToggle-active-background: $txgl-gray-200;
 $txcm-selectToggle-has-selected-color: $txgl-black;
 $txcm-selectToggle-has-selected-background: $txgl-white-900;
+$txcm-selectToggle-is-opened-color: $txgl-gray-100;
+$txcm-selectToggle-is-opened-background: $txgl-black-500;
+$txcm-selectToggle-is-opened-borderColor: $txgl-gray-300;
 
 .txcm-selectToggle {
   height: $txgl-filter-height;
@@ -37,6 +40,18 @@ $txcm-selectToggle-has-selected-background: $txgl-white-900;
     &:active {
       color: $txcm-selectToggle-has-selected-color;
       background: $txcm-selectToggle-has-selected-background;
+    }
+  }
+
+  &-is-opened {
+    color: $txcm-selectToggle-is-opened-color;
+    background: $txcm-selectToggle-is-opened-background;
+    box-shadow: 0 0 0 1px inset $txcm-selectToggle-is-opened-borderColor;
+
+    &:hover,
+    &:active {
+      color: $txcm-selectToggle-is-opened-color;
+      background: $txcm-selectToggle-is-opened-background;
     }
   }
 }
@@ -66,7 +81,7 @@ $txcm-selectOptions-background: $txgl-gray-400;
   opacity: 0;
   transition: opacity $txgl-transition-default, opacity $txgl-transition-default step-end;
 
-  &-is-active {
+  &-is-opened {
     visibility: visible;
     opacity: 1;
     transition: opacity $txgl-transition-default, opacity $txgl-transition-default step-start;

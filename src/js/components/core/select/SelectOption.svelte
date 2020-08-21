@@ -17,15 +17,15 @@
   $: scrollHighlightIntoView(highlight);
 
   function scrollPickIntoView() {
-    if (pick === value) node.scrollIntoView({ block: 'nearest' });
+    if (node && pick === value) node.scrollIntoView({ block: 'nearest' });
   }
 
   function scrollHighlightIntoView() {
-    if (highlight === index) node.scrollIntoView({ block: 'nearest' });
+    if (node && highlight === index) node.scrollIntoView({ block: 'nearest' });
   }
 
   function scrollActiveIntoView() {
-    if (isActive && pick === value) node.scrollIntoView({ block: 'center' });
+    if (node && isActive && pick === value) node.scrollIntoView({ block: 'center' });
   }
 
   function isHighlighted() {
