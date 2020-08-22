@@ -1,6 +1,7 @@
 $txcm-header-borderColor: $txgl-gray-400;
 
 .txcm-filter {
+  @include txmx-layer(top);
   position: fixed;
   top: 72px;
   left: 0;

@@ -10,8 +10,8 @@
   import LoadingPage from './pages/LoadingPage.svelte';
   import LogoutPage from './pages/LogoutPage.svelte';
 
-  function next({ success, result }) {
-    if (success) initUser(result);
+  function next({ success, results }) {
+    if (success) initUser(results);
     else navigate('/login');
   }
 

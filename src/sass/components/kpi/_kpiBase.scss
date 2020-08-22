@@ -7,11 +7,7 @@ $txcm-kpiRow-borderColor: $txgl-gray-400;
   box-sizing: border-box;
   height: $txcm-kpiRow-height;
   padding: 24px 0;
-  border-bottom: 1px solid $txcm-kpiRow-borderColor;
-
-  &:last-child {
-    border: 0;
-  }
+  border-top: 1px solid $txcm-kpiRow-borderColor;
 }
 
 $txcm-kpiLabel-width: 210px;
@@ -24,6 +20,7 @@ $txcm-kpiLabel-color: $txgl-white-900;
   padding: 0 ($txcm-kpiLabel-width * 0.4) 0 $txgl-gap;
   color: $txcm-kpiLabel-color;
   font-weight: bold;
+  line-height: 1.25;
 }
 
 $txcm-kpiCell-width: 307px;
@@ -32,12 +29,19 @@ $txcm-kpiCell-width: 307px;
   display: flex;
   align-items: flex-end;
   align-content: flex-end;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
   width: $txcm-kpiCell-width;
 
   &::before {
+    @include txmx-pseudo(relative);
+    order: -4;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  &::after {
     @include txmx-pseudo(relative);
     order: -1;
     height: 100%;
@@ -49,26 +53,55 @@ $txcm-kpiCellValue-color: $txgl-white-900;
 
 .txcm-kpiCellValue {
   @include txmx-fontSize(22px);
+  display: flex;
   order: -3;
+  align-items: center;
   color: $txcm-kpiCellValue-color;
   font-weight: bold;
+  line-height: 1;
+}
+
+$txcm-kpiCellValueIcon-width: 8px;
+$txcm-kpiCellValueIcon-height: 12px;
+$txcm-kpiCellValueIcon-growing-fill: $txgl-green;
+$txcm-kpiCellValueIcon-falling-fill: $txgl-green;
+
+.txcm-kpiCellValueIcon {
+  width: $txcm-kpiCellValueIcon-width;
+  height: $txcm-kpiCellValueIcon-height;
+  margin: 0 12px 0 0;
+
+  &-is-growing {
+    transform: rotate(90deg);
+    fill: $txcm-kpiCellValueIcon-growing-fill;
+  }
+
+  &-is-falling {
+    transform: rotate(-90deg);
+    fill: $txcm-kpiCellValueIcon-falling-fill;
+  }
 }
 
 $txcm-kpiCellSubValue-color: $txgl-white-900;
 
 .txcm-kpiCellSubValue {
+  display: flex;
   order: -2;
-  margin: 0.5em 0 0;
+  align-items: flex-end;
+  flex-grow: 100;
+  margin: auto 0 0;
   color: $txcm-kpiCellSubValue-color;
   font-weight: bold;
-  line-height: 1.75;
+  line-height: 1;
 }
 
 $txcm-kpiCellAddValue-minWidth: 52px;
 
 .txcm-kpiCellAddValue {
+  position: relative;
+  top: 4px;
   min-width: $txcm-kpiCellAddValue-minWidth;
-  margin: 0.75em 0 0 4px;
+  margin: 0 0 0 4px;
   text-align: right;
   line-height: 1.75;
 }
