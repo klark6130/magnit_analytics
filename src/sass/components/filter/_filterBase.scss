@@ -1,23 +1,39 @@
-$txcm-header-borderColor: $txgl-gray-400;
+$txcm-filter-height: 65px;
+$txcm-filter-position: 72px;
+$txcm-filter-borderColor: $txgl-gray-400;
 
 .txcm-filter {
   @include txmx-layer(top);
   position: fixed;
-  top: 72px;
+  top: $txcm-filter-position;
   left: 0;
+  overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px $txgl-gap;
-  border-bottom: 1px solid $txcm-header-borderColor;
-  background: $txgl-background;
+  height: calc(100% - #{$txcm-filter-position});
+  padding: 20px $txgl-gap 0;
+  pointer-events: none;
+
+  &::before {
+    @include txmx-pseudo;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $txcm-filter-height;
+    border-bottom: 1px solid $txcm-filter-borderColor;
+    background: $txgl-background;
+    pointer-events: all;
+  }
 }
 
 .txcm-filterGroup {
   display: flex;
   align-items: center;
   margin: 0 14px 0 0;
+  pointer-events: all;
 
   &:last-child {
     margin: 0;

@@ -80,6 +80,7 @@ $txcm-selectOptions-background: $txgl-gray-400;
   list-style: none;
   opacity: 0;
   transition: opacity $txgl-transition-default, opacity $txgl-transition-default step-end;
+  transform: translateZ(0);
 
   &-is-opened {
     visibility: visible;
