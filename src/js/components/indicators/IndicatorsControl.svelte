@@ -30,7 +30,8 @@
         const eased = cubicInOut(ratio);
         return `
           opacity: ${eased * opacity};
-          margin-bottom: ${(1 - eased) * -32}px;`;
+          margin-bottom: ${(1 - eased) * -32}px;
+        `;
       },
     };
   }

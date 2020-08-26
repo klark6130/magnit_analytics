@@ -3,12 +3,15 @@
   import Filter from 'components/filter/Filter.svelte';
   import Indicators from 'components/indicators/Indicators.svelte';
   import Overview from 'components/overview/Overview.svelte';
+  import Updater from 'components/updater/Updater.svelte';
   import { initFilter, subscribeFilterAll } from 'state/filter';
   import { initIndicators } from 'state/indicators';
+  import { initData } from 'state/data';
 
   export let filterConfig;
   export let indicatorsConfig;
 
+  initData();
   initFilter(filterConfig);
   initIndicators(indicatorsConfig);
 
@@ -33,4 +36,7 @@
   config={filterConfig} />
 <Indicators
   config={indicatorsConfig} />
-<Overview />
+<Overview
+  config={indicatorsConfig} />
+<Updater
+  {conditions} />

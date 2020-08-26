@@ -15,9 +15,13 @@
     count={filtered.length}
     length={group.length}
     {filter}>
-      {#each group.indicators as indicator (indicator.name)}
+      {#each group.indicators as indicator}
         <IndicatorsControl
-          {...indicator}
+          name={indicator.name}
+          label={indicator.label}
+          note={indicator.note}
+          status={indicator.status}
+          value={indicator.value}
           exclude={true} />
       {/each}
   </ListGroup>

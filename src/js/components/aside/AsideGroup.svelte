@@ -15,11 +15,11 @@
     count={filtered.length}
     length={group.length}
     {filter}>
-      {#each group.links as link}
+      {#each group.indicators as indicator}
         <NavLink
           linkClass="txcm-asideNavGroupLink"
-          to={link.href}>
-            {link.label}
+          to={indicator.href}>
+            {indicator.label}
             <svg
               class="txcm-asideNavGroupLinkIcon">
                 <use

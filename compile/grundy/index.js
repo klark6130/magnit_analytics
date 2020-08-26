@@ -28,6 +28,7 @@ const MARKUP = `
 
   <body>
     <!-- SPRITES -->
+    <script defer src="/js/proxy.js"></script>
     <script defer src="/js/scripts.js"></script>
   </body>
 
